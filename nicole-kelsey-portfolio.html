@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="description" content="Nicole Kelsey — UX/UI Designer creating intuitive digital experiences across enterprise, luxury, and web platforms.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Nicole Kelsey — UX/UI Designer & Creative</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --ink:#0f0f0f;--ink2:#3a3a3a;--ink3:#888;
+  --cream:#f9f6f1;--warm:#f0ebe2;--card:#ffffff;
+  --accent:#c8a96e;--accent2:#7a4f2d;
+  --border:rgba(0,0,0,0.08);
+}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--ink);overflow-x:hidden}
+::-webkit-scrollbar{width:4px}
+::-webkit-scrollbar-track{background:var(--cream)}
+::-webkit-scrollbar-thumb{background:var(--accent);border-radius:4px}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:800;display:flex;align-items:center;justify-content:space-between;padding:0 6vw;height:64px;background:rgba(249,246,241,0.9);backdrop-filter:blur(20px);border-bottom:1px solid var(--border)}
+.nav-logo{font-family:'Playfair Display',serif;font-size:18px;font-weight:700;color:var(--ink);text-decoration:none;letter-spacing:-.02em}
+.nav-logo em{font-style:italic;color:var(--accent2)}
+.nav-links{display:flex;gap:2rem;list-style:none}
+.nav-links a{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ink2);text-decoration:none;transition:color .2s}
+.nav-links a:hover{color:var(--accent2)}
+.nav-cta{background:var(--ink);color:#fff !important;padding:8px 20px;border-radius:50px;transition:background .2s !important}
+.nav-cta:hover{background:var(--accent2) !important}
+
+/* HERO */
+.hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;padding:100px 6vw 60px;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 80% 50%,rgba(200,169,110,.15) 0%,transparent 70%),radial-gradient(ellipse 40% 40% at 10% 80%,rgba(122,79,45,.07) 0%,transparent 60%)}
+.hero-content{position:relative;z-index:1}
+.hero-badge{display:inline-flex;align-items:center;gap:10px;background:var(--card);border:1px solid var(--border);padding:7px 16px;border-radius:50px;margin-bottom:28px;box-shadow:0 2px 12px rgba(0,0,0,.06)}
+.hero-dot{width:7px;height:7px;border-radius:50%;background:#4ade80;box-shadow:0 0 0 3px rgba(74,222,128,.2);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 3px rgba(74,222,128,.2)}50%{box-shadow:0 0 0 7px rgba(74,222,128,.08)}}
+.hero-badge span{font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--ink2)}
+.hero-title{font-family:'Playfair Display',serif;font-size:clamp(46px,5.5vw,78px);font-weight:900;line-height:1.0;letter-spacing:-.03em;margin-bottom:22px}
+.hero-title em{font-style:italic;color:var(--accent2)}
+.hero-sub{font-size:16px;font-weight:300;line-height:1.75;color:var(--ink2);max-width:420px;margin-bottom:36px}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap}
+.btn-primary{background:var(--ink);color:#fff;padding:13px 30px;border-radius:50px;text-decoration:none;font-size:13px;font-weight:600;letter-spacing:.03em;transition:all .2s}
+.btn-primary:hover{background:var(--accent2);transform:translateY(-2px)}
+.btn-outline{border:1.5px solid var(--ink);color:var(--ink);padding:13px 30px;border-radius:50px;text-decoration:none;font-size:13px;font-weight:600;transition:all .2s}
+.btn-outline:hover{background:var(--ink);color:#fff;transform:translateY(-2px)}
+.hero-right{position:relative;z-index:1}
+.hero-visual-card{background:var(--card);border-radius:24px;padding:28px;box-shadow:0 24px 80px rgba(0,0,0,.10);border:1px solid var(--border)}
+.hvc-screens{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:20px}
+.hvc-screen{border-radius:10px;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;font-size:32px}
+.hvc-screen.s1{background:#0f0f1a}.hvc-screen.s2{background:#0a0a0a}.hvc-screen.s3{background:#0a1628}.hvc-screen.s4{background:#111118}
+.hvc-label{display:flex;justify-content:space-between;align-items:center}
+.hvc-label h3{font-family:'Playfair Display',serif;font-size:15px;font-weight:700}
+.hvc-tag{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:var(--warm);color:var(--accent2);padding:4px 12px;border-radius:20px}
+.hero-float{position:absolute;top:-18px;right:-18px;background:var(--accent);color:#fff;padding:14px 18px;border-radius:16px;font-size:12px;font-weight:800;text-align:center;line-height:1.3;box-shadow:0 10px 28px rgba(200,169,110,.45);transform:rotate(5deg)}
+
+/* TICKER */
+.ticker{background:var(--ink);overflow:hidden;height:44px;display:flex;align-items:center}
+.ticker-track{display:flex;animation:ticker 28s linear infinite;white-space:nowrap}
+.ticker-track:hover{animation-play-state:paused}
+@keyframes ticker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.tick-item{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.4);padding:0 28px;flex-shrink:0;transition:color .2s}
+.tick-item:hover{color:var(--accent)}
+.tick-sep{color:var(--accent);padding:0 4px;font-size:10px}
+
+/* SECTION SHARED */
+section{padding:90px 6vw}
+.section-eyebrow{font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--accent2);margin-bottom:14px;display:flex;align-items:center;gap:10px}
+.section-eyebrow::after{content:'';width:32px;height:1px;background:var(--accent)}
+.section-h{font-family:'Playfair Display',serif;font-size:clamp(30px,4vw,50px);font-weight:900;line-height:1.08;letter-spacing:-.03em;margin-bottom:14px}
+.section-h em{font-style:italic;color:var(--accent2)}
+.section-sub{font-size:16px;font-weight:300;color:var(--ink2);line-height:1.75;max-width:540px}
+
+/* MINI UI COMPONENTS */
+.tu-bar{height:32px;background:#12122a;display:flex;align-items:center;padding:0 12px;gap:18px}
+.tu-bar-dot{width:6px;height:6px;border-radius:50%}
+.tu-bar-dot.r{background:#ff5f57}.tu-bar-dot.y{background:#febc2e}.tu-bar-dot.g{background:#28c840}
+.tu-bar-nav{font-size:8px;color:rgba(255,255,255,.3);font-weight:600;letter-spacing:.04em}
+.tu-bar-nav.a{color:#a78bfa}
+.tu-body{background:#0f0f1a;padding:10px;display:flex;flex-direction:column;gap:5px}
+.tu-row{height:24px;background:rgba(255,255,255,.04);border-radius:5px;display:flex;align-items:center;padding:0 8px;gap:6px}
+.tu-txt{font-size:7px;color:rgba(255,255,255,.35);flex:1}
+.tu-badge{font-size:7px;font-weight:700;padding:2px 7px;border-radius:8px}
+.tu-badge.p{background:rgba(251,191,36,.18);color:#fbbf24}
+.tu-badge.d{background:rgba(52,211,153,.18);color:#34d399}
+.tu-badge.h{background:rgba(239,68,68,.18);color:#ef4444}
+.fe-head{height:36px;background:#0d0d0d;border-bottom:1px solid rgba(255,255,255,.05);display:flex;align-items:center;justify-content:center;gap:7px}
+.fe-circle{width:18px;height:18px;background:#c8102e;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:8px;color:#fff;font-weight:900}
+.fe-htxt{font-size:8px;color:rgba(255,255,255,.6);font-weight:600;letter-spacing:.07em}
+.fe-body{background:#0a0a0a;padding:10px;display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+.fe-prod{background:#111;border-radius:7px;padding:8px 6px;border:1px solid rgba(255,255,255,.04)}
+.fe-icon{height:30px;background:linear-gradient(135deg,rgba(200,16,46,.15),rgba(200,16,46,.3));border-radius:4px;margin-bottom:5px;display:flex;align-items:center;justify-content:center;font-size:12px}
+.fe-pname{font-size:6px;color:rgba(255,255,255,.4);margin-bottom:3px}
+.fe-price{font-size:8px;color:#c8102e;font-weight:700}
+.cy-head{height:32px;background:#061525;display:flex;align-items:center;padding:0 10px;gap:7px}
+.cy-alive{width:6px;height:6px;border-radius:50%;background:#22c55e;animation:pulse 2s infinite}
+.cy-htxt{font-size:8px;color:rgba(255,255,255,.5);font-weight:600}
+.cy-body{background:#0d2845;padding:10px;display:grid;grid-template-columns:1fr 1fr;gap:7px}
+.cy-stat{background:rgba(255,255,255,.04);border-radius:7px;padding:8px}
+.cy-val{font-size:16px;font-weight:800;color:#fff;line-height:1}
+.cy-label{font-size:6px;color:rgba(255,255,255,.35);margin-top:2px}
+.cy-map{grid-column:span 2;display:grid;grid-template-columns:repeat(10,1fr);gap:2px}
+.cy-cell{height:10px;border-radius:1px}
+.cy-cell.f{background:#3b82f6}.cy-cell.e{background:rgba(255,255,255,.07)}.cy-cell.r{background:#22c55e}
+.dp-nav{height:34px;background:rgba(17,17,24,.95);border-bottom:1.5px solid rgba(232,66,10,.4);display:flex;align-items:center;justify-content:space-between;padding:0 12px}
+.dp-brand{font-size:8px;font-weight:900;color:#fff;letter-spacing:.06em;text-transform:uppercase}
+.dp-brand span{color:#E8420A}
+.dp-hero-bar{height:64px;background:#E8420A;display:flex;align-items:center;padding:0 12px}
+.dp-headline{font-size:11px;font-weight:900;color:#fff;line-height:1.2;text-transform:uppercase}
+.dp-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:5px;padding:8px;background:#111118}
+.dp-c{background:rgba(255,255,255,.04);border-radius:5px;padding:6px;border:1px solid rgba(255,255,255,.05);text-align:center}
+.dp-ci{font-size:12px;margin-bottom:2px}
+.dp-cl{font-size:6px;color:rgba(255,255,255,.35)}
+
+/* WORK */
+#work{background:var(--card)}
+.projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:28px;max-width:1160px;margin:48px auto 0}
+.proj-card{background:var(--cream);border-radius:22px;overflow:hidden;border:1px solid var(--border);transition:transform .3s,box-shadow .3s;cursor:pointer;position:relative}
+.proj-card:hover{transform:translateY(-8px);box-shadow:0 36px 80px rgba(0,0,0,.13)}
+.proj-card:hover .proj-cta{opacity:1;transform:translateY(0)}
+.proj-thumb{height:240px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.mini-ui{width:82%;border-radius:10px;overflow:hidden;box-shadow:0 16px 48px rgba(0,0,0,.5)}
+.proj-cta{position:absolute;top:50%;left:50%;transform:translate(-50%,-40%);background:var(--ink);color:#fff;padding:11px 24px;border-radius:50px;font-size:12px;font-weight:700;letter-spacing:.04em;opacity:0;transition:opacity .25s,transform .25s;pointer-events:none;white-space:nowrap}
+.proj-info{padding:24px}
+.proj-tags{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:13px}
+.tag{font-size:9px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:var(--warm);color:var(--accent2);padding:3px 11px;border-radius:20px}
+.proj-title{font-family:'Playfair Display',serif;font-size:20px;font-weight:800;margin-bottom:8px;letter-spacing:-.02em}
+.proj-desc{font-size:13px;color:var(--ink2);line-height:1.7;font-weight:300;margin-bottom:18px}
+.proj-footer{display:flex;justify-content:space-between;align-items:center}
+.proj-meta-row{display:flex;gap:18px}
+.proj-meta{font-size:11px;color:var(--ink3);font-weight:500}
+.proj-meta strong{display:block;color:var(--ink);font-size:12px;font-weight:700;margin-bottom:1px}
+.proj-arrow{width:36px;height:36px;background:var(--ink);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:14px;transition:background .2s,transform .2s}
+.proj-card:hover .proj-arrow{background:var(--accent2);transform:scale(1.1)}
+
+/* MODAL */
+.modal-overlay{position:fixed;inset:0;z-index:2000;background:rgba(0,0,0,.7);backdrop-filter:blur(8px);display:flex;align-items:flex-start;justify-content:center;padding:20px;overflow-y:auto;opacity:0;pointer-events:none;transition:opacity .3s}
+.modal-overlay.open{opacity:1;pointer-events:all}
+.modal{background:var(--card);border-radius:28px;max-width:880px;width:100%;margin:auto;position:relative;transform:translateY(40px);transition:transform .3s;border:1px solid var(--border);overflow:hidden}
+.modal-overlay.open .modal{transform:translateY(0)}
+.modal-close-row{position:sticky;top:0;z-index:10;display:flex;justify-content:flex-end;padding:16px 20px;background:linear-gradient(to bottom,var(--card) 60%,transparent);pointer-events:none}
+.modal-close-btn{width:36px;height:36px;border-radius:50%;background:var(--warm);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:16px;color:var(--ink2);transition:background .2s;pointer-events:all;flex-shrink:0}
+.modal-close-btn:hover{background:var(--ink);color:#fff}
+.modal-hero{height:300px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.modal-hero-inner{width:72%;max-width:520px}
+.modal-body{padding:40px 48px 56px}
+.modal-eyebrow{font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--accent2);margin-bottom:12px}
+.modal-title{font-family:'Playfair Display',serif;font-size:34px;font-weight:900;letter-spacing:-.03em;line-height:1.05;margin-bottom:20px}
+.modal-title em{font-style:italic;color:var(--accent2)}
+.modal-overview{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--border);border-radius:16px;overflow:hidden;margin-bottom:36px}
+.ov-item{padding:18px;border-right:1px solid var(--border)}
+.ov-item:last-child{border-right:none}
+.ov-label{font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ink3);margin-bottom:5px}
+.ov-val{font-size:13px;font-weight:600;color:var(--ink)}
+.modal-sec{margin-bottom:34px}
+.modal-sec-title{font-family:'Playfair Display',serif;font-size:21px;font-weight:800;letter-spacing:-.02em;margin-bottom:14px;padding-bottom:12px;border-bottom:1px solid var(--border)}
+.modal-sec-title em{font-style:italic;color:var(--accent2)}
+.modal-p{font-size:15px;font-weight:300;line-height:1.8;color:var(--ink2);margin-bottom:14px}
+.modal-cols{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.modal-list{list-style:none;display:flex;flex-direction:column;gap:10px}
+.modal-list li{display:flex;gap:10px;font-size:14px;font-weight:300;color:var(--ink2);line-height:1.6}
+.modal-list li::before{content:'→';color:var(--accent2);font-weight:700;flex-shrink:0;margin-top:1px}
+.modal-steps{display:flex;flex-direction:column}
+.modal-step{display:flex;gap:18px;padding:18px 0;border-bottom:1px solid var(--border)}
+.modal-step:last-child{border-bottom:none}
+.step-circle{width:42px;height:42px;border-radius:50%;background:var(--warm);border:1.5px solid var(--accent);display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:15px;font-weight:900;color:var(--accent2);flex-shrink:0}
+.step-name{font-size:14px;font-weight:700;margin-bottom:3px}
+.step-detail{font-size:13px;font-weight:300;color:var(--ink2);line-height:1.6}
+.screen-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:20px 0}
+.screen-item{border-radius:12px;overflow:hidden;border:1px solid var(--border)}
+.screen-preview{height:148px;display:flex;align-items:center;justify-content:center}
+.screen-cap{padding:11px 14px;background:var(--warm)}
+.screen-cap-title{font-size:12px;font-weight:700;color:var(--ink)}
+.screen-cap-desc{font-size:11px;color:var(--ink3);margin-top:2px}
+.outcome-box{background:var(--warm);border-radius:14px;padding:26px;border:1px solid rgba(200,169,110,.3)}
+.outcome-title{font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--accent2);margin-bottom:12px}
+.modal-tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}
+.modal-tag{font-size:11px;font-weight:600;padding:5px 14px;border-radius:50px;border:1.5px solid rgba(122,79,45,.2);color:var(--accent2);background:var(--warm)}
+
+/* ABOUT */
+#about{background:var(--cream)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;max-width:1100px;margin:0 auto}
+.about-p{font-size:16px;font-weight:300;line-height:1.8;color:var(--ink2);margin-bottom:18px}
+.about-stats{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:34px}
+.stat-card{background:var(--card);border-radius:14px;padding:20px;border:1px solid var(--border)}
+.stat-n{font-family:'Playfair Display',serif;font-size:38px;font-weight:900;line-height:1;letter-spacing:-.04em}
+.stat-n em{font-style:italic;color:var(--accent2)}
+.stat-l{font-size:12px;color:var(--ink3);font-weight:500;margin-top:4px}
+.about-portrait{background:var(--warm);border-radius:24px;padding:28px}
+.portrait-ph{width:100%;height:260px;background:linear-gradient(135deg,#e8ddd0,#d4c4b0);border-radius:16px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;margin-bottom:20px}
+.portrait-init{font-family:'Playfair Display',serif;font-size:56px;font-weight:900;color:var(--accent2);opacity:.45;letter-spacing:-.04em}
+.portrait-txt{font-size:11px;color:var(--ink3);font-weight:500;letter-spacing:.04em}
+.skill-pills{display:flex;flex-wrap:wrap;gap:8px}
+.skill-pill{font-size:11px;font-weight:600;padding:5px 14px;border-radius:50px;border:1.5px solid rgba(122,79,45,.2);color:var(--accent2);background:var(--card)}
+
+/* SERVICES */
+#services{background:var(--ink)}
+#services .section-eyebrow{color:var(--accent)}
+#services .section-eyebrow::after{background:var(--accent)}
+#services .section-h{color:#fff}
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:18px;max-width:1100px;margin:38px auto 0}
+.svc{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:18px;padding:26px 22px;transition:all .3s}
+.svc:hover{background:rgba(255,255,255,.07);transform:translateY(-4px)}
+.svc-icon{font-size:24px;margin-bottom:16px}
+.svc-name{font-family:'Playfair Display',serif;font-size:18px;font-weight:700;color:#fff;margin-bottom:8px}
+.svc-desc{font-size:13px;color:rgba(255,255,255,.4);line-height:1.7;font-weight:300}
+
+/* CONTACT */
+#contact{background:var(--cream)}
+.contact-card{max-width:620px;margin:44px auto 0;background:var(--card);border-radius:26px;padding:50px;text-align:center;box-shadow:0 20px 80px rgba(0,0,0,.07);border:1px solid var(--border)}
+.contact-h{font-family:'Playfair Display',serif;font-size:32px;font-weight:900;margin-bottom:14px;letter-spacing:-.03em}
+.contact-h em{font-style:italic;color:var(--accent2)}
+.contact-p{font-size:15px;color:var(--ink2);line-height:1.75;font-weight:300;margin-bottom:34px}
+.contact-links{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.clink{display:flex;align-items:center;gap:9px;padding:13px 26px;border-radius:50px;text-decoration:none;font-size:13px;font-weight:600;transition:all .2s}
+.clink.email{background:var(--ink);color:#fff}
+.clink.email:hover{background:var(--accent2);transform:translateY(-2px)}
+.clink.li{border:1.5px solid var(--ink);color:var(--ink)}
+.clink.li:hover{background:var(--ink);color:#fff;transform:translateY(-2px)}
+footer{background:var(--ink);padding:26px 6vw;display:flex;justify-content:space-between;align-items:center}
+.footer-logo{font-family:'Playfair Display',serif;font-size:16px;font-weight:700;color:#fff}
+.footer-logo em{font-style:italic;color:var(--accent)}
+.footer-c{font-size:12px;color:rgba(255,255,255,.3)}
+
+/* ANIM */
+.fade-up{opacity:0;transform:translateY(26px);transition:opacity .6s ease,transform .6s ease}
+.fade-up.visible{opacity:1;transform:translateY(0)}
+
+@media(max-width:768px){
+  .hero{grid-template-columns:1fr;padding:90px 6vw 50px}.hero-right{display:none}
+  .about-grid{grid-template-columns:1fr}.modal-body{padding:22px 22px 40px}
+  .modal-overview{grid-template-columns:1fr 1fr}.ov-item:nth-child(2){border-right:none}
+  .ov-item:nth-child(3){border-top:1px solid var(--border)}.modal-cols{grid-template-columns:1fr}
+  .screen-grid{grid-template-columns:1fr}.nav-links{display:none}
+  .projects-grid{grid-template-columns:1fr}.services-grid{grid-template-columns:1fr 1fr}
+  footer{flex-direction:column;gap:10px;text-align:center}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="#">Nicole <em>Kelsey</em></a>
+  <ul class="nav-links">
+    <li><a href="#work">Work</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#contact" class="nav-cta">Hire Me</a></li>
+  </ul>
+</nav>
+
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-badge"><div class="hero-dot"></div><span>Available for new projects</span></div>
+    <h1 class="hero-title">Design that<br/><em>thinks</em> and<br/>feels right.</h1>
+    <p class="hero-sub">UX/UI Designer & Creative — translating complex systems into clear, intuitive experiences across enterprise, luxury, logistics, and brand.</p>
+    <div class="hero-btns">
+      <a href="#work" class="btn-primary">View My Work</a>
+      <a href="#contact" class="btn-outline">Get in Touch</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-visual-card">
+      <div class="hvc-screens">
+        <div class="hvc-screen s1">🎫</div>
+        <div class="hvc-screen s2">🏎️</div>
+        <div class="hvc-screen s3">🚢</div>
+        <div class="hvc-screen s4">🏗️</div>
+      </div>
+      <div class="hvc-label">
+        <h3>6 Projects · 4 Industries</h3>
+        <span class="hvc-tag">UX/UI · Brand · Web</span>
+      </div>
+      <div class="hero-float">Click any<br/>card to<br/>explore →</div>
+    </div>
+  </div>
+</section>
+
+<div class="ticker">
+  <div class="ticker-track">
+    <span class="tick-item">Figma</span><span class="tick-sep">·</span><span class="tick-item">UX Strategy</span><span class="tick-sep">·</span><span class="tick-item">UI Design</span><span class="tick-sep">·</span><span class="tick-item">Adobe Illustrator</span><span class="tick-sep">·</span><span class="tick-item">Photoshop</span><span class="tick-sep">·</span><span class="tick-item">Premiere Pro</span><span class="tick-sep">·</span><span class="tick-item">After Effects</span><span class="tick-sep">·</span><span class="tick-item">WordPress</span><span class="tick-sep">·</span><span class="tick-item">Prototyping</span><span class="tick-sep">·</span><span class="tick-item">Brand Identity</span><span class="tick-sep">·</span><span class="tick-item">Motion Graphics</span><span class="tick-sep">·</span><span class="tick-item">Photography</span><span class="tick-sep">·</span><span class="tick-item">Video Editing</span><span class="tick-sep">·</span><span class="tick-item">Social Media</span><span class="tick-sep">·</span><span class="tick-item">InDesign</span><span class="tick-sep">·</span>
+    <span class="tick-item">Figma</span><span class="tick-sep">·</span><span class="tick-item">UX Strategy</span><span class="tick-sep">·</span><span class="tick-item">UI Design</span><span class="tick-sep">·</span><span class="tick-item">Adobe Illustrator</span><span class="tick-sep">·</span><span class="tick-item">Photoshop</span><span class="tick-sep">·</span><span class="tick-item">Premiere Pro</span><span class="tick-sep">·</span><span class="tick-item">After Effects</span><span class="tick-sep">·</span><span class="tick-item">WordPress</span><span class="tick-sep">·</span><span class="tick-item">Prototyping</span><span class="tick-sep">·</span><span class="tick-item">Brand Identity</span><span class="tick-sep">·</span><span class="tick-item">Motion Graphics</span><span class="tick-sep">·</span><span class="tick-item">Photography</span><span class="tick-sep">·</span><span class="tick-item">Video Editing</span><span class="tick-sep">·</span><span class="tick-item">Social Media</span><span class="tick-sep">·</span><span class="tick-item">InDesign</span><span class="tick-sep">·</span>
+  </div>
+</div>
+
+<section id="work">
+  <div class="fade-up">
+    <div class="section-eyebrow">Selected Work</div>
+    <h2 class="section-h">Projects that <em>solve real</em> problems</h2>
+    <p class="section-sub">Click any project card to explore the full case study — problem, process, key screens, and outcomes.</p>
+  </div>
+  <div class="projects-grid">
+
+    <div class="proj-card fade-up" onclick="openModal('ticket')">
+      <div class="proj-thumb" style="background:linear-gradient(160deg,#0f0f1a,#1a1a35)">
+        <div class="mini-ui">
+          <div class="tu-bar"><div class="tu-bar-dot r"></div><div class="tu-bar-dot y"></div><div class="tu-bar-dot g"></div><span class="tu-bar-nav a">Dashboard</span><span class="tu-bar-nav">Tickets</span><span class="tu-bar-nav">Reports</span></div>
+          <div class="tu-body">
+            <div class="tu-row"><span class="tu-txt">T001: Software License Request</span><span class="tu-badge p">Pending</span></div>
+            <div class="tu-row"><span class="tu-txt">T002: Security Audit</span><span class="tu-badge h">High</span></div>
+            <div class="tu-row"><span class="tu-txt">T003: System Migration</span><span class="tu-badge d">Done</span></div>
+            <div class="tu-row"><span class="tu-txt">T004: User Training</span><span class="tu-badge p">Pending</span></div>
+          </div>
+        </div>
+        <div class="proj-cta">View Case Study →</div>
+      </div>
+      <div class="proj-info">
+        <div class="proj-tags"><span class="tag">UX/UI</span><span class="tag">Enterprise</span><span class="tag">Web App</span></div>
+        <h3 class="proj-title">Internal Ticket Desk System</h3>
+        <p class="proj-desc">Redesigning a complex support system to reduce cognitive load, improve ticket visibility, and support multiple user roles in one interface.</p>
+        <div class="proj-footer"><div class="proj-meta-row"><div class="proj-meta"><strong>6 Months</strong>Timeline</div><div class="proj-meta"><strong>Enterprise</strong>Client</div></div><div class="proj-arrow">→</div></div>
+      </div>
+    </div>
+
+    <div class="proj-card fade-up" onclick="openModal('ferrari')">
+      <div class="proj-thumb" style="background:linear-gradient(160deg,#100005,#250010)">
+        <div class="mini-ui">
+          <div class="fe-head"><div class="fe-circle">F</div><span class="fe-htxt">Ferrari Dealer Portal</span></div>
+          <div class="fe-body">
+            <div class="fe-prod"><div class="fe-icon">🔧</div><div class="fe-pname">Diagnostic DT-4</div><div class="fe-price">€850</div></div>
+            <div class="fe-prod"><div class="fe-icon">⚙️</div><div class="fe-pname">Spare Part 2</div><div class="fe-price">€5,000</div></div>
+            <div class="fe-prod"><div class="fe-icon">📋</div><div class="fe-pname">Dealer License</div><div class="fe-price">€10,000</div></div>
+          </div>
+        </div>
+        <div class="proj-cta">View Case Study →</div>
+      </div>
+      <div class="proj-info">
+        <div class="proj-tags"><span class="tag">UX/UI</span><span class="tag">Luxury</span><span class="tag">E-Commerce</span></div>
+        <h3 class="proj-title">Luxury Automotive Dealer Platform</h3>
+        <p class="proj-desc">A secure dealer-only web platform for a luxury automotive manufacturer — streamlining tool, parts, and license purchasing with a premium interface.</p>
+        <div class="proj-footer"><div class="proj-meta-row"><div class="proj-meta"><strong>6 Weeks</strong>Timeline</div><div class="proj-meta"><strong>Confidential</strong>Client</div></div><div class="proj-arrow">→</div></div>
+      </div>
+    </div>
+
+    <div class="proj-card fade-up" onclick="openModal('cyms')">
+      <div class="proj-thumb" style="background:linear-gradient(160deg,#020e1f,#0a1f3a)">
+        <div class="mini-ui">
+          <div class="cy-head"><div class="cy-alive"></div><span class="cy-htxt">Ford Container Yard — Live</span></div>
+          <div class="cy-body">
+            <div class="cy-stat"><div class="cy-val">12,247</div><div class="cy-label">Processed Today</div></div>
+            <div class="cy-stat"><div class="cy-val" style="color:#22c55e">Live</div><div class="cy-label">Auto-refresh</div></div>
+            <div class="cy-map"><div class="cy-cell f"></div><div class="cy-cell f"></div><div class="cy-cell r"></div><div class="cy-cell e"></div><div class="cy-cell f"></div><div class="cy-cell e"></div><div class="cy-cell f"></div><div class="cy-cell r"></div><div class="cy-cell f"></div><div class="cy-cell e"></div></div>
+          </div>
+        </div>
+        <div class="proj-cta">View Case Study →</div>
+      </div>
+      <div class="proj-info">
+        <div class="proj-tags"><span class="tag">UX/UI</span><span class="tag">Logistics</span><span class="tag">Dashboard</span></div>
+        <h3 class="proj-title">Container Yard Management System</h3>
+        <p class="proj-desc">A unified CYMS for automotive logistics — real-time tracking, colour-coded yard maps, role-based access, and mobile-first operator workflows.</p>
+        <div class="proj-footer"><div class="proj-meta-row"><div class="proj-meta"><strong>1 Month</strong>Timeline</div><div class="proj-meta"><strong>Confidential</strong>Client</div></div><div class="proj-arrow">→</div></div>
+      </div>
+    </div>
+
+    <div class="proj-card fade-up" onclick="openModal('dp')">
+      <div class="proj-thumb" style="background:linear-gradient(160deg,#0f0900,#2d1600)">
+        <div class="mini-ui">
+          <div class="dp-nav"><span class="dp-brand">DP <span>Construction</span></span><span style="font-size:8px;color:rgba(255,255,255,.3)">≡</span></div>
+          <div class="dp-hero-bar"><div class="dp-headline">Renovation &<br/>Construction Solutions</div></div>
+          <div class="dp-cards"><div class="dp-c"><div class="dp-ci">🧱</div><div class="dp-cl">Building</div></div><div class="dp-c"><div class="dp-ci">🎨</div><div class="dp-cl">Finishing</div></div><div class="dp-c"><div class="dp-ci">📐</div><div class="dp-cl">Design</div></div></div>
+        </div>
+        <div class="proj-cta">View Case Study →</div>
+      </div>
+      <div class="proj-info">
+        <div class="proj-tags"><span class="tag">Web Design</span><span class="tag">Brand</span><span class="tag">PWA</span></div>
+        <h3 class="proj-title">DP Construction & Maintenance</h3>
+        <p class="proj-desc">Full brand identity and web presence — responsive website, Progressive Web App, and print marketing materials for a Port Elizabeth construction company.</p>
+        <div class="proj-footer"><div class="proj-meta-row"><div class="proj-meta"><strong>Web + PWA</strong>Deliverable</div><div class="proj-meta"><strong>Local Business</strong>Client</div></div><div class="proj-arrow">→</div></div>
+      </div>
+    </div>
+
+    <div class="proj-card fade-up" onclick="openModal('social')">
+      <div class="proj-thumb" style="background:linear-gradient(160deg,#050012,#150030)">
+        <div class="mini-ui" style="width:76%">
+          <div style="height:34px;background:#0a0015;display:flex;align-items:center;padding:0 12px;gap:8px"><div style="width:22px;height:22px;border-radius:50%;background:linear-gradient(135deg,#9333ea,#ec4899)"></div><span style="font-size:8px;color:rgba(255,255,255,.6);font-weight:600">Social Content Creation</span></div>
+          <div style="padding:8px;background:#050012;display:grid;grid-template-columns:repeat(3,1fr);gap:4px">
+            <div style="border-radius:5px;aspect-ratio:1;background:linear-gradient(135deg,#9333ea,#ec4899)"></div><div style="border-radius:5px;aspect-ratio:1;background:linear-gradient(135deg,#3b82f6,#06b6d4)"></div><div style="border-radius:5px;aspect-ratio:1;background:linear-gradient(135deg,#f59e0b,#ef4444)"></div>
+            <div style="border-radius:5px;aspect-ratio:1;background:linear-gradient(135deg,#10b981,#3b82f6)"></div><div style="border-radius:5px;aspect-ratio:1;background:linear-gradient(135deg,#ec4899,#f59e0b)"></div><div style="border-radius:5px;aspect-ratio:1;background:linear-gradient(135deg,#8b5cf6,#10b981)"></div>
+          </div>
+        </div>
+        <div class="proj-cta">View Details →</div>
+      </div>
+      <div class="proj-info">
+        <div class="proj-tags"><span class="tag">Content</span><span class="tag">Social Media</span><span class="tag">Motion</span></div>
+        <h3 class="proj-title">Social Media & Content Creation</h3>
+        <p class="proj-desc">Designing and producing social content — graphics, short-form video, motion graphics, and campaign assets across LinkedIn, Instagram, Facebook, and YouTube.</p>
+        <div class="proj-footer"><div class="proj-meta-row"><div class="proj-meta"><strong>Ongoing</strong>Work Type</div><div class="proj-meta"><strong>Multi-client</strong>Scope</div></div><div class="proj-arrow">→</div></div>
+      </div>
+    </div>
+
+    <div class="proj-card fade-up" onclick="openModal('brand')">
+      <div class="proj-thumb" style="background:linear-gradient(160deg,#001508,#002510)">
+        <div class="mini-ui" style="width:78%">
+          <div style="padding:14px;background:#001508;display:flex;flex-direction:column;gap:9px">
+            <div style="display:flex;gap:10px;align-items:center"><div style="width:38px;height:38px;background:#fff;border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:900;color:#E8420A">DP</div><div><div style="font-size:10px;color:#fff;font-weight:800">Brand System</div><div style="font-size:7px;color:rgba(255,255,255,.4)">Visual Identity</div></div></div>
+            <div style="display:flex;gap:5px"><div style="background:#E8420A;height:18px;flex:1;border-radius:3px"></div><div style="background:#111118;height:18px;flex:1;border-radius:3px"></div><div style="background:#fff;height:18px;flex:1;border-radius:3px;border:1px solid rgba(255,255,255,.1)"></div></div>
+            <div style="display:flex;gap:6px"><div style="background:rgba(255,255,255,.05);border-radius:5px;padding:7px 8px;flex:1"><div style="font-size:11px;color:#fff;font-weight:900;font-family:serif;font-style:italic">Aa</div><div style="font-size:6px;color:rgba(255,255,255,.3)">Display</div></div><div style="background:rgba(255,255,255,.05);border-radius:5px;padding:7px 8px;flex:1"><div style="font-size:11px;color:#fff;font-weight:500">Aa</div><div style="font-size:6px;color:rgba(255,255,255,.3)">Body</div></div></div>
+          </div>
+        </div>
+        <div class="proj-cta">View Details →</div>
+      </div>
+      <div class="proj-info">
+        <div class="proj-tags"><span class="tag">Brand</span><span class="tag">Identity</span><span class="tag">Print</span></div>
+        <h3 class="proj-title">Brand Identity & Marketing Materials</h3>
+        <p class="proj-desc">Creating cohesive brand identities from scratch — logos, colour systems, typography, print collateral, and brand guidelines for multiple clients.</p>
+        <div class="proj-footer"><div class="proj-meta-row"><div class="proj-meta"><strong>Various</strong>Clients</div><div class="proj-meta"><strong>End-to-end</strong>Brand</div></div><div class="proj-arrow">→</div></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="about">
+  <div class="about-grid">
+    <div class="fade-up">
+      <div class="section-eyebrow">About Me</div>
+      <h2 class="section-h">Turning <em>complexity</em> into clarity</h2>
+      <p class="about-p">I'm a UX/UI Designer and Creative based in Port Elizabeth with a passion for making complex systems feel simple and human. Whether it's enterprise software, luxury e-commerce, logistics platforms, or small business branding — I bring the same rigour: research first, design second.</p>
+      <p class="about-p">I'm equally comfortable leading UX strategy, picking up a camera, editing a video, or building a WordPress site. My strength is being the person who does it all without sacrificing quality at any layer.</p>
+      <div class="about-stats">
+        <div class="stat-card"><div class="stat-n">4<em>+</em></div><div class="stat-l">Enterprise projects</div></div>
+        <div class="stat-card"><div class="stat-n">6<em>+</em></div><div class="stat-l">Industries served</div></div>
+        <div class="stat-card"><div class="stat-n"><em>∞</em></div><div class="stat-l">Passion for UX</div></div>
+        <div class="stat-card"><div class="stat-n">6<em>mo</em></div><div class="stat-l">Longest project</div></div>
+      </div>
+    </div>
+    <div class="fade-up">
+      <div class="about-portrait">
+        <div class="portrait-ph"><div class="portrait-init">NK</div><span class="portrait-txt">UX/UI Designer · Port Elizabeth, ZA</span></div>
+        <div class="skill-pills">
+          <span class="skill-pill">Figma</span><span class="skill-pill">Illustrator</span><span class="skill-pill">Photoshop</span><span class="skill-pill">InDesign</span><span class="skill-pill">Premiere Pro</span><span class="skill-pill">After Effects</span><span class="skill-pill">WordPress</span><span class="skill-pill">HTML/CSS</span><span class="skill-pill">FigJam</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div style="max-width:600px" class="fade-up">
+    <div class="section-eyebrow">What I Do</div>
+    <h2 class="section-h">Services I <em>bring</em> to the table</h2>
+  </div>
+  <div class="services-grid">
+    <div class="svc fade-up"><div class="svc-icon">🎯</div><div class="svc-name">UX Strategy</div><div class="svc-desc">User research, journey mapping, information architecture — foundation before any pixel is placed.</div></div>
+    <div class="svc fade-up"><div class="svc-icon">🖥️</div><div class="svc-name">UI Design</div><div class="svc-desc">Clean, component-driven interfaces with strong hierarchy and status-driven patterns.</div></div>
+    <div class="svc fade-up"><div class="svc-icon">🎨</div><div class="svc-name">Brand Identity</div><div class="svc-desc">Logos, colour systems, typography, and guidelines that create a lasting, coherent impression.</div></div>
+    <div class="svc fade-up"><div class="svc-icon">📱</div><div class="svc-name">Content Creation</div><div class="svc-desc">Social graphics, motion graphics, photography, video editing, and campaign asset suites.</div></div>
+    <div class="svc fade-up"><div class="svc-icon">🌐</div><div class="svc-name">Web Design & Dev</div><div class="svc-desc">Responsive websites and PWAs in WordPress or hand-coded — fast, accessible, on-brand.</div></div>
+    <div class="svc fade-up"><div class="svc-icon">🏷️</div><div class="svc-name">Design Leadership</div><div class="svc-desc">Brand custodianship, asset library management, and keeping design consistent at scale.</div></div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="contact-card fade-up">
+    <div class="section-eyebrow" style="justify-content:center;margin-bottom:18px">Let's Work Together</div>
+    <h2 class="contact-h">Ready to build something <em>great?</em></h2>
+    <p class="contact-p">I'm currently available for new projects. Whether you need a full UX/UI overhaul, a brand refresh, or a creative generalist to join your team — let's talk.</p>
+    <div class="contact-links">
+      <a href="mailto:nicolekelsey001@icloud.com" class="clink email">✉️ nicolekelsey001@icloud.com</a>
+      <a href="https://linkedin.com/in/nicolekelsey" target="_blank" class="clink li">in LinkedIn</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-logo">Nicole <em>Kelsey</em></div>
+  <div class="footer-c">© 2026 Nicole Kelsey. All rights reserved.</div>
+</footer>
+
+<!-- ═══ MODALS ═══ -->
+
+<!-- TICKET -->
+<div class="modal-overlay" id="modal-ticket" onclick="maybeClose(event,'modal-ticket')">
+ <div class="modal">
+  <div class="modal-close-row"><button class="modal-close-btn" onclick="closeModal('modal-ticket')">✕</button></div>
+  <div class="modal-hero" style="background:linear-gradient(160deg,#0f0f1a,#1a1a35)">
+   <div class="modal-hero-inner">
+    <div style="width:100%;border-radius:10px;overflow:hidden;box-shadow:0 16px 48px rgba(0,0,0,.5)">
+     <div class="tu-bar"><div class="tu-bar-dot r"></div><div class="tu-bar-dot y"></div><div class="tu-bar-dot g"></div><span class="tu-bar-nav a">Dashboard</span><span class="tu-bar-nav">Tickets</span><span class="tu-bar-nav">Knowledge Base</span><span class="tu-bar-nav">Reports</span></div>
+     <div class="tu-body">
+      <div class="tu-row"><span class="tu-txt">T001: Software License — Adobe Creative Suite</span><span class="tu-badge p">Manager Approval Pending</span></div>
+      <div class="tu-row"><span class="tu-txt">T002: Security Audit</span><span class="tu-badge h">High Priority</span></div>
+      <div class="tu-row"><span class="tu-txt">T003: System Migration — Completed, awaiting review</span><span class="tu-badge d">Done</span></div>
+      <div class="tu-row"><span class="tu-txt">T004: User Training</span><span class="tu-badge p">Not Started</span></div>
+      <div class="tu-row"><span class="tu-txt">T005: Finance Budget Approval</span><span class="tu-badge h">High Priority</span></div>
+     </div>
+    </div>
+   </div>
+  </div>
+  <div class="modal-body">
+   <div class="modal-eyebrow">Case Study · Enterprise UX/UI</div>
+   <h2 class="modal-title">Internal Ticket <em>Desk</em> System</h2>
+   <div class="modal-overview">
+    <div class="ov-item"><div class="ov-label">Client</div><div class="ov-val">Confidential Enterprise</div></div>
+    <div class="ov-item"><div class="ov-label">Platform</div><div class="ov-val">Web (Internal)</div></div>
+    <div class="ov-item"><div class="ov-label">Timeline</div><div class="ov-val">6 Months</div></div>
+    <div class="ov-item"><div class="ov-label">Tools</div><div class="ov-val">Figma · FigJam</div></div>
+   </div>
+   <div class="modal-sec">
+    <h3 class="modal-sec-title">The <em>Problem</em></h3>
+    <p class="modal-p">Employees relied on a complex, form-heavy system to submit and manage support tickets. The existing experience lacked clarity, consistency, and meaningful feedback — resulting in widespread confusion around ticket status, ownership, and progress.</p>
+    <div class="modal-cols">
+     <ul class="modal-list"><li>Unclear ticket statuses and ownership created accountability gaps</li><li>High cognitive load during ticket creation led to submission errors</li></ul>
+     <ul class="modal-list"><li>Limited visibility into ticket progress and full thread history</li><li>No consistent design language across different views and roles</li></ul>
+    </div>
+   </div>
+   <div class="modal-sec">
+    <h3 class="modal-sec-title">Research & <em>Insights</em></h3>
+    <ul class="modal-list">
+     <li>Employees needed a guided, step-by-step form experience — not a single overwhelming screen</li>
+     <li>Agents prioritised fast scanning and status-at-a-glance over detailed read-through</li>
+     <li>Both groups needed clear feedback that actions had been registered by the system</li>
+     <li>Multiple user roles (submitter, agent, manager, admin) needed distinct yet consistent experiences</li>
+    </ul>
+   </div>
+   <div class="modal-sec">
+    <h3 class="modal-sec-title">UX <em>Process</em></h3>
+    <div class="modal-steps">
+     <div class="modal-step"><div class="step-circle">01</div><div><div class="step-name">Reviewing system requirements and constraints</div><div class="step-detail">Understanding technical limitations, existing data structures, and business logic before proposing any design changes.</div></div></div>
+     <div class="modal-step"><div class="step-circle">02</div><div><div class="step-name">Mapping key user flows for ticket creation and management</div><div class="step-detail">Documenting end-to-end journeys for both submitters and agents, identifying friction points and decision trees.</div></div></div>
+     <div class="modal-step"><div class="step-circle">03</div><div><div class="step-name">Designing wireframes to reduce cognitive load</div><div class="step-detail">Progressive disclosure, grouped form fields, and contextual guidance breaking ticket creation into manageable steps.</div></div></div>
+     <div class="modal-step"><div class="step-circle">04</div><div><div class="step-name">Iterating layouts based on usability and clarity</div><div class="step-detail">Multiple rounds of layout refinement focusing on hierarchy, component reuse, and clear status communication across all ticket states.</div></div></div>
+    </div>
+   </div>
+   <div class="modal-sec">
+    <h3 class="modal-sec-title">Key <em>Screens</em></h3>
+    <div class="screen-grid">
+     <div class="screen-item"><div class="screen-preview" style="background:#0f0f1a"><div style="width:80%;display:flex;flex-direction:column;gap:5px"><div style="height:22px;background:rgba(255,255,255,.06);border-radius:4px;display:flex;align-items:center;padding:0 8px"><span style="font-size:7px;color:rgba(255,255,255,.3)">Enter Email</span></div><div style="height:22px;background:rgba(255,255,255,.06);border-radius:4px;display:flex;align-items:center;padding:0 8px"><span style="font-size:7px;color:rgba(255,255,255,.3)">Password</span></div><div style="height:22px;background:#a78bfa;border-radius:4px;display:flex;align-items:center;justify-content:center"><span style="font-size:7px;color:#fff;font-weight:700">LOG IN</span></div></div></div><div class="screen-cap"><div class="screen-cap-title">Login Screen</div><div class="screen-cap-desc">Secure access with clear validation</div></div></div>
+     <div class="screen-item"><div class="screen-preview" style="background:#0f0f1a"><div style="width:88%;display:flex;flex-direction:column;gap:4px"><div class="tu-row"><span class="tu-txt">T001: Software License</span><span class="tu-badge p">Pending</span></div><div class="tu-row"><span class="tu-txt">T002: Security Audit</span><span class="tu-badge h">High</span></div><div class="tu-row"><span class="tu-txt">T003: Migration</span><span class="tu-badge d">Done</span></div></div></div><div class="screen-cap"><div class="screen-cap-title">Dashboard</div><div class="screen-cap-desc">High-level ticket status overview</div></div></div>
+     <div class="screen-item"><div class="screen-preview" style="background:#0f0f1a"><div style="width:80%;display:flex;flex-direction:column;gap:5px"><div style="height:18px;background:rgba(255,255,255,.06);border-radius:4px"></div><div style="display:grid;grid-template-columns:1fr 1fr;gap:4px"><div style="height:18px;background:rgba(255,255,255,.06);border-radius:4px"></div><div style="height:18px;background:rgba(255,255,255,.06);border-radius:4px"></div></div><div style="height:36px;background:rgba(255,255,255,.06);border-radius:4px"></div><div style="height:18px;background:#a78bfa;border-radius:4px;display:flex;align-items:center;justify-content:center"><span style="font-size:7px;color:#fff;font-weight:700">SUBMIT REQUEST</span></div></div></div><div class="screen-cap"><div class="screen-cap-title">Create Ticket</div><div class="screen-cap-desc">Guided, structured form to reduce errors</div></div></div>
+     <div class="screen-item"><div class="screen-preview" style="background:#0f0f1a"><div style="width:88%;display:flex;flex-direction:column;gap:5px"><div style="background:rgba(255,255,255,.04);border-radius:6px;padding:8px"><div style="font-size:7px;color:#a78bfa;margin-bottom:4px;font-weight:600">TICKET THREAD</div><div style="height:9px;background:rgba(255,255,255,.08);border-radius:3px;margin-bottom:3px"></div><div style="height:9px;background:rgba(255,255,255,.08);border-radius:3px;width:70%"></div></div><div style="display:flex;gap:5px"><div style="flex:1;height:18px;background:rgba(255,255,255,.06);border-radius:4px"></div><div style="width:50px;height:18px;background:#a78bfa;border-radius:4px;display:flex;align-items:center;justify-content:center"><span style="font-size:6px;color:#fff;font-weight:700">REPLY</span></div></div></div></div><div class="screen-cap"><div class="screen-cap-title">Ticket Detail View</div><div class="screen-cap-desc">Full thread history, participants, and actions</div></div></div>
+    </div>
+   </div>
+   <div class="modal-sec">
+    <div class="outcome-box"><div class="outcome-title">Outcomes & Learnings</div>
+     <ul class="modal-list">
+      <li>Streamlined system enabling employees to submit, track, and manage tickets through a clear, structured workflow</li>
+      <li>Reinforced the importance of designing internal tools for speed, accuracy, and multi-role support simultaneously</li>
+      <li>Anticipating edge cases in form-heavy enterprise systems is as critical as the primary user flow</li>
+     </ul>
+    </div>
+   </div>
+   <div class="modal-tags"><span class="modal-tag">Figma</span><span class="modal-tag">FigJam</span><span class="modal-tag">Enterprise UX</span><span class="modal-tag">Form Design</span><span class="modal-tag">Design Systems</span><span class="modal-tag">Multi-role UI</span></div>
+  </div>
+ </div>
+</div>
+
+<!-- FERRARI -->
+<div class="modal-overlay" id="modal-ferrari" onclick="maybeClose(event,'modal-ferrari')">
+ <div class="modal">
+  <div class="modal-close-row"><button class="modal-close-btn" onclick="closeModal('modal-ferrari')">✕</button></div>
+  <div class="modal-hero" style="background:linear-gradient(160deg,#100005,#250010)">
+   <div class="modal-hero-inner">
+    <div style="width:100%;border-radius:10px;overflow:hidden;box-shadow:0 16px 48px rgba(0,0,0,.6)">
+     <div class="fe-head" style="height:44px"><div class="fe-circle" style="width:26px;height:26px;font-size:12px">F</div><span class="fe-htxt" style="font-size:11px">Ferrari Dealer Portal — Authorized Access Only</span></div>
+     <div class="fe-body" style="padding:14px">
+      <div class="fe-prod"><div class="fe-icon" style="height:44px;font-size:18px">🔧</div><div class="fe-pname">Diagnostic Tester DT-4</div><div class="fe-price" style="font-size:11px">€850</div></div>
+      <div class="fe-prod"><div class="fe-icon" style="height:44px;font-size:18px">⚙️</div><div class="fe-pname">Spare Part 1</div><div class="fe-price" style="font-size:11px">€5,000</div></div>
+      <div class="fe-prod"><div class="fe-icon" style="height:44px;font-size:18px">📋</div><div class="fe-pname">Dealer License</div><div class="fe-price" style="font-size:11px">€10,000</div></div>
+     </div>
+    </div>
+   </div>
+  </div>
+  <div class="modal-body">
+   <div class="modal-eyebrow">Case Study · Luxury E-Commerce UX/UI</div>
+   <h2 class="modal-title">Luxury Automotive <em>Dealer</em> Platform</h2>
+   <div class="modal-overview">
+    <div class="ov-item"><div class="ov-label">Client</div><div class="ov-val">Confidential Automotive</div></div>
+    <div class="ov-item"><div class="ov-label">Platform</div><div class="ov-val">Responsive Web App</div></div>
+    <div class="ov-item"><div class="ov-label">Timeline</div><div class="ov-val">6 Weeks</div></div>
+    <div class="ov-item"><div class="ov-label">Tools</div><div class="ov-val">Figma · Prototyping</div></div>
+   </div>
+   <div class="modal-sec">
+    <h3 class="modal-sec-title">The <em>Problem</em></h3>
+    <p class="modal-p">Authorized dealers needed a secure and efficient way to purchase tools, spare parts, and licenses — but the existing experience was complex and time-consuming. The platform needed to feel worthy of a luxury brand while remaining fast and functional for professional repeat users.</p>
+    <ul class="modal-list">
+     <li>Dealer users struggled to navigate a dense, poorly organised product catalog</li>
+     <li>Critical actions like licensing and checkout lacked clarity and confidence signals</li>
+     <li>The platform needed to balance high security requirements with genuine usability</li>
+    </ul>
+   </div>
+   <div class="modal-sec">
+    <h3 class="modal-sec-title">Research & <em>Insights</em></h3>
+    <ul class="modal-list">
+     <li>Dealers prioritise speed and efficiency — they are expert repeat users, not casual browsers</li>
+     <li>Most users follow repeat purchase patterns; browsing the full catalog is rare</li>
+     <li>Clear system feedback is essential at checkout and high-value payment steps</li>
+     <li>Visual language needed to signal trust, exclusivity, and premium quality throughout</li>
+    </ul>
+   </div>
+   <div class="modal-sec">
+    <h3 class="modal-sec-title">UX <em>Process</em></h3>
+    <div class="modal-steps">
+     <div class="modal-step"><div class="step-circle">01</div><div><div class="step-name">Analysed existing dealer workflows and business requirements</div><div class="step-detail">Mapped the full purchasing lifecycle — from authentication through to license activation and order tracking.</div></div></div>
+     <div class="modal-step"><div class="step-circle">02</div><div><div class="step-name">Defined user flows for browsing, purchasing, and order tracking</div><div class="step-detail">Streamlined key journeys to minimise clicks between intent and completion for expert dealer users.</div></div></div>
+     <div class="modal-step"><div class="step-circle">03</div><div><div class="step-name">Created wireframes to simplify complex product and checkout journeys</div><div class="step-detail">Progressive disclosure for product details, a consolidated cart, and a clear checkout summary with payment confidence signals.</div></div></div>
+     <div class="modal-step"><div class="step-circle">04</div><div><div class="step-name">Refined flows based on usability and stakeholder feedback</div><div class="step-detail">Iterated on cart, checkout, and order confirmation states to align both dealer needs and brand standards.</div></div></div>
+    </div>
+   </div>
+   <div class="modal-sec">
+    <h3 class="modal-sec-title">Key <em>Screens</em></h3>
+    <div class="screen-grid">
+     <div class="screen-item"><div class="screen-preview" style="background:#0d0d0d"><div style="width:80%;display:flex;flex-direction:column;gap:6px;align-items:center"><div style="width:28px;height:28px;background:#c8102e;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;color:#fff;font-weight:900">F</div><div style="font-size:7px;color:rgba(255,255,255,.4);letter-spacing:.05em;text-align:center">PLEASE ENTER YOUR DETAILS</div><div style="height:16px;background:rgba(255,255,255,.06);border-radius:3px;width:100%"></div><div style="height:16px;background:rgba(255,255,255,.06);border-radius:3px;width:100%"></div><div style="height:16px;background:#c8102e;border-radius:3px;width:100%;display:flex;align-items:center;justify-content:center"><span style="font-size:6px;color:#fff;font-weight:700">LOG IN</span></div></div></div><div class="screen-cap"><div class="screen-cap-title">Dealer Login</div><div class="screen-cap-desc">Secure authentication, premium brand alignment</div></div></div>
+     <div class="screen-item"><div class="screen-preview" style="background:#0a0a0a"><div class="fe-body" style="padding:10px"><div class="fe-prod"><div class="fe-icon">🔧</div><div class="fe-pname">DT-4 Diagnostic</div><div class="fe-price">€850</div></div><div class="fe-prod"><div class="fe-icon">⚙️</div><div class="fe-pname">Spare Part</div><div class="fe-price">€5,000</div></div><div class="fe-prod"><div class="fe-icon">📋</div><div class="fe-pname">License</div><div class="fe-price">€10,000</div></div></div></div><div class="screen-cap"><div class="screen-cap-title">Product Catalog</div><div class="screen-cap-desc">Clear listings with focused call-to-actions</div></div></div>
+     <div class="screen-item"><div class="screen-preview" style="background:#0a0a0a"><div style="width:80%;display:flex;flex-direction:column;gap:5px"><div style="background:rgba(255,255,255,.04);border-radius:6px;padding:8px"><div style="font-size:8px;color:rgba(255,255,255,.6);margin-bottom:3px;font-weight:600">SHOPPING CART — 2 items</div><div style="height:11px;background:rgba(255,255,255,.07);border-radius:3px;margin-bottom:3px"></div><div style="height:11px;background:rgba(255,255,255,.07);border-radius:3px"></div></div><div style="display:flex;justify-content:space-between;padding:0 4px"><span style="font-size:7px;color:rgba(255,255,255,.4)">Total</span><span style="font-size:8px;color:#c8102e;font-weight:700">€10,000</span></div><div style="height:14px;background:#c8102e;border-radius:4px;display:flex;align-items:center;justify-content:center"><span style="font-size:7px;color:#fff;font-weight:700">CHECKOUT</span></div></div></div><div class="screen-cap"><div class="screen-cap-title">Cart & Checkout</div><div class="screen-cap-desc">Simplified cart with transparent order summary</div></div></div>
+     <div class="screen-item"><div class="screen-preview" style="background:#0a0a0a"><div style="width:80%;display:flex;flex-direction:column;gap:4px"><div style="font-size:8px;color:rgba(255,255,255,.5);font-weight:600">DELIVERY DETAILS</div><div style="height:13px;background:rgba(255,255,255,.06);border-radius:3px"></div><div style="height:13px;background:rgba(255,255,255,.06);border-radius:3px"></div><div style="font-size:8px;color:rgba(255,255,255,.5);font-weight:600;margin-top:4px">PAYMENT</div><div style="height:13px;background:rgba(255,255,255,.06);border-radius:3px"></div><div style="height:14px;background:#c8102e;border-radius:3px;margin-top:5px;display:flex;align-items:center;justify-content:center"><span style="font-size:7px;color:#fff;font-weight:700">PLACE ORDER</span></div></div></div><div class="screen-cap"><div class="screen-cap-title">Order Details</div><div class="screen-cap-desc">Delivery, payment, and confirmation states</div></div></div>
+    </div>
+   </div>
+   <div class="modal-sec">
+    <div class="outcome-box"><div class="outcome-title">Outcomes & Learnings</div>
+     <ul class="modal-list">
+      <li>More intuitive, efficient, and reliable experience for authorized dealers purchasing high-value items</li>
+      <li>Designing for expert users still requires radical simplicity — complexity is not a proxy for professionalism</li>
+      <li>Clear UX writing dramatically reduces errors during high-value transactions</li>
+     </ul>
+    </div>
+   </div>
+   <div class="modal-tags"><span class="modal-tag">Figma</span><span class="modal-tag">Luxury UX</span><span class="modal-tag">E-Commerce</span><span class="modal-tag">Prototyping</span><span class="modal-tag">Dealer Portal</span><span class="modal-tag">Secure Platform</span></div>
+  </div>
+ </div>
+</div>
+
+<!-- CYMS -->
+<div class="modal-overlay" id="modal-cyms" onclick="maybeClose(event,'modal-cyms')">
+ <div class="modal">
+  <div class="modal-close-row"><button class="modal-close-btn" onclick="closeModal('modal-cyms')">✕</button></div>
+  <div class="modal-hero" style="background:linear-gradient(160deg,#020e1f,#0a1f3a)">
+   <div class="modal-hero-inner">
+    <div style="width:100%;border-radius:10px;overflow:hidden;box-shadow:0 16px 48px rgba(0,0,0,.5)">
+     <div class="cy-head" style="height:38px"><div class="cy-alive"></div><span class="cy-htxt" style="font-size:10px">Ford Container Yard — Live Dashboard · Last Updated 09:16:51</span></div>
+     <div class="cy-body" style="padding:12px">
+      <div class="cy-stat"><div class="cy-val" style="font-size:20px">12,247</div><div class="cy-label">Processed Today</div></div>
+      <div class="cy-stat"><div class="cy-val" style="color:#22c55e;font-size:20px">Live</div><div class="cy-label">Auto-refresh</div></div>
+      <div class="cy-map" style="grid-template-columns:repeat(12,1fr)"><div class="cy-cell f"></div><div class="cy-cell f"></div><div class="cy-cell r"></div><div class="cy-cell e"></div><div class="cy-cell f"></div><div class="cy-cell f"></div><div class="cy-cell e"></div><div class="cy-cell f"></div><div class="cy-cell r"></div><div class="cy-cell f"></div><div class="cy-cell e"></div><div class="cy-cell f"></div></div>
+     </div>
+    </div>
+   </div>
+  </div>
+  <div class="modal-body">
+   <div class="modal-eyebrow">Case Study · Logistics UX/UI & Visual Design</div>
+   <h2 class="modal-title">Container Yard <em>Management</em> System</h2>
+   <div class="modal-overview">
+    <div class="ov-item"><div class="ov-label">Client</div><div class="ov-val">Automotive Logistics</div></div>
+    <div class="ov-item"><div class="ov-label">Platform</div><div class="ov-val">Web + Mobile/Tablet</div></div>
+    <div class="ov-item"><div class="ov-label">Timeline</div><div class="ov-val">1 Month</div></div>
+    <div class="ov-item"><div class="ov-label">Role</div><div class="ov-val">UX/UI · Visual Design</div></div>
+   </div>
+   <div class="modal-sec">
+    <h3 class="modal-sec-title">The <em>Problem</em></h3>
+    <p class="modal-p">The container yard relied on fragmented, manual, and disconnected processes — resulting in significant inefficiencies and severely limited visibility across operations. Staff on the ground had no reliable way to know the real-time state of the yard.</p>
+    <ul class="modal-list">
+     <li>Manual tracking of container movements increased operational errors and dwell time costs</li>
+     <li>Limited real-time visibility of yard capacity and container status slowed every decision</li>
+     <li>Complex coordination between internal staff and external users (clients, shipping lines)</li>
+    </ul>
+   </div>
+   <div class="modal-sec">
+    <h3 class="modal-sec-title">Research & <em>Insights</em></h3>
+    <ul class="modal-list">
+     <li>Yard operators needed fast, visual status indicators — not data-heavy screens requiring interpretation</li>
+     <li>External users (clients, shipping lines) required simple, guided request workflows with zero ambiguity</li>
+     <li>Real-time status updates were critical to reducing operational delays and bottlenecks</li>
+     <li>Mobile-first task views were essential for yard and reacher operators working on the ground</li>
+    </ul>
+   </div>
+   <div class="modal-sec">
+    <h3 class="modal-sec-title">UX <em>Process</em></h3>
+    <div class="modal-steps">
+     <div class="modal-step"><div class="step-circle">01</div><div><div class="step-name">Mapped operational workflows</div><div class="step-detail">Documented the full container lifecycle — from vessel arrival through gate processing, yard storage, and departure scheduling.</div></div></div>
+     <div class="modal-step"><div class="step-circle">02</div><div><div class="step-name">Designed role-based user journeys</div><div class="step-detail">Separate flows for yard administrators, ground operators, and external clients — each with appropriate access and task focus.</div></div></div>
+     <div class="modal-step"><div class="step-circle">03</div><div><div class="step-name">Created low-fidelity wireframes</div><div class="step-detail">Rapid wireframing of dashboards, yard maps, container detail views, and mobile task screens before any visual design.</div></div></div>
+     <div class="modal-step"><div class="step-circle">04</div><div><div class="step-name">Validated flows with operational constraints</div><div class="step-detail">Testing designs against real yard workflows and edge cases — reefer containers, penalty tracking, emergency moves.</div></div></div>
+    </div>
+   </div>
+   <div class="modal-sec">
+    <h3 class="modal-sec-title">Key <em>Screens</em></h3>
+    <div class="screen-grid">
+     <div class="screen-item"><div class="screen-preview" style="background:#0d2845"><div style="width:88%"><div class="cy-body" style="padding:8px"><div class="cy-stat"><div class="cy-val">12,247</div><div class="cy-label">Processed Today</div></div><div class="cy-stat"><div class="cy-val" style="color:#22c55e">Live</div><div class="cy-label">Auto-refresh</div></div><div class="cy-map"><div class="cy-cell f"></div><div class="cy-cell r"></div><div class="cy-cell e"></div><div class="cy-cell f"></div><div class="cy-cell f"></div><div class="cy-cell e"></div><div class="cy-cell f"></div><div class="cy-cell r"></div><div class="cy-cell f"></div><div class="cy-cell e"></div></div></div></div></div><div class="screen-cap"><div class="screen-cap-title">Live Dashboard</div><div class="screen-cap-desc">Real-time KPIs and operational monitoring</div></div></div>
+     <div class="screen-item"><div class="screen-preview" style="background:#0d2845"><div style="width:86%;display:flex;flex-direction:column;gap:4px"><div style="font-size:7px;color:rgba(255,255,255,.5);font-weight:600;margin-bottom:2px">CONTAINER INVENTORY</div><div style="height:13px;background:rgba(255,255,255,.06);border-radius:3px;display:flex;align-items:center;padding:0 6px"><span style="font-size:6px;color:#3b82f6;font-weight:700">FULL · MSKU0253350</span></div><div style="height:13px;background:rgba(255,255,255,.06);border-radius:3px;display:flex;align-items:center;padding:0 6px"><span style="font-size:6px;color:rgba(255,255,255,.3)">EMPTY · MSKU1122334</span></div><div style="height:13px;background:rgba(255,255,255,.06);border-radius:3px;display:flex;align-items:center;padding:0 6px"><span style="font-size:6px;color:#22c55e;font-weight:700">REEFER · MSKU9987654</span></div></div></div><div class="screen-cap"><div class="screen-cap-title">Container Inventory</div><div class="screen-cap-desc">Colour-coded yard map with live occupancy</div></div></div>
+     <div class="screen-item"><div class="screen-preview" style="background:#0d2845"><div style="width:80%;background:rgba(255,255,255,.04);border-radius:8px;padding:10px"><div style="font-size:8px;color:#22c55e;font-weight:700;margin-bottom:6px">MSKU0253350</div><div style="display:grid;grid-template-columns:1fr 1fr;gap:4px"><div><div style="font-size:6px;color:rgba(255,255,255,.3)">Position</div><div style="font-size:8px;color:#fff;font-weight:600">1-1</div></div><div><div style="font-size:6px;color:rgba(255,255,255,.3)">Status</div><div style="font-size:8px;color:#3b82f6;font-weight:600">Full</div></div><div><div style="font-size:6px;color:rgba(255,255,255,.3)">Vessel</div><div style="font-size:8px;color:#fff;font-weight:600">MV Pacific</div></div><div><div style="font-size:6px;color:rgba(255,255,255,.3)">Weight</div><div style="font-size:8px;color:#fff;font-weight:600">14,449 kg</div></div></div></div></div><div class="screen-cap"><div class="screen-cap-title">Container Detail</div><div class="screen-cap-desc">Shipping info, movement history, quick actions</div></div></div>
+     <div class="screen-item"><div class="screen-preview" style="background:#0d2845"><div style="width:88%;display:flex;flex-direction:column;gap:4px"><div style="font-size:7px;color:rgba(255,255,255,.5);font-weight:600">EXPORT REQUESTS</div><div style="height:13px;background:rgba(255,255,255,.05);border-radius:3px;display:flex;align-items:center;padding:0 6px;justify-content:space-between"><span style="font-size:6px;color:rgba(255,255,255,.4)">ECR-001 · Auto Parts</span><span style="font-size:6px;color:#22c55e;font-weight:700">Approved</span></div><div style="height:13px;background:rgba(255,255,255,.05);border-radius:3px;display:flex;align-items:center;padding:0 6px;justify-content:space-between"><span style="font-size:6px;color:rgba(255,255,255,.4)">ECR-002 · Export EU</span><span style="font-size:6px;color:#fbbf24;font-weight:700">Pending</span></div><div style="height:13px;background:rgba(255,255,255,.05);border-radius:3px;display:flex;align-items:center;padding:0 6px;justify-content:space-between"><span style="font-size:6px;color:rgba(255,255,255,.4)">ECR-003 · Cold Chain</span><span style="font-size:6px;color:#22c55e;font-weight:700">Approved</span></div></div></div><div class="screen-cap"><div class="screen-cap-title">Container Portal</div><div class="screen-cap-desc">Client portal for managing export requests</div></div></div>
+    </div>
+   </div>
+   <div class="modal-sec">
+    <div class="outcome-box"><div class="outcome-title">Outcomes & Learnings</div>
+     <ul class="modal-list">
+      <li>Unified CYMS enabling end-to-end tracking, role-based access, and real-time operational visibility</li>
+      <li>Reinforced the value of visual indicators over data tables in fast-paced operational environments</li>
+      <li>Strengthened collaboration between UX, technical, and operational teams within a tight one-month timeline</li>
+     </ul>
+    </div>
+   </div>
+   <div class="modal-tags"><span class="modal-tag">Figma</span><span class="modal-tag">Logistics UX</span><span class="modal-tag">Dashboard Design</span><span class="modal-tag">Mobile-first</span><span class="modal-tag">Role-based Access</span><span class="modal-tag">Real-time UI</span></div>
+  </div>
+ </div>
+</div>
+
+<!-- DP CONSTRUCTION -->
+<div class="modal-overlay" id="modal-dp" onclick="maybeClose(event,'modal-dp')">
+ <div class="modal">
+  <div class="modal-close-row"><button class="modal-close-btn" onclick="closeModal('modal-dp')">✕</button></div>
+  <div class="modal-hero" style="background:linear-gradient(160deg,#0f0900,#2d1600)">
+   <div class="modal-hero-inner">
+    <div style="width:100%;border-radius:10px;overflow:hidden;box-shadow:0 16px 48px rgba(0,0,0,.5)">
+     <div class="dp-nav" style="height:40px"><span class="dp-brand" style="font-size:9px">DP <span>Construction & Maintenance</span></span></div>
+     <div class="dp-hero-bar" style="height:68px"><div class="dp-headline" style="font-size:13px">Renovation &<br/>Construction Solutions</div></div>
+     <div class="dp-cards" style="grid-template-columns:repeat(6,1fr);padding:9px"><div class="dp-c"><div class="dp-ci">🧱</div><div class="dp-cl">Building</div></div><div class="dp-c"><div class="dp-ci">🎨</div><div class="dp-cl">Finishing</div></div><div class="dp-c"><div class="dp-ci">📐</div><div class="dp-cl">Design</div></div><div class="dp-c"><div class="dp-ci">🔧</div><div class="dp-cl">Plumbing</div></div><div class="dp-c"><div class="dp-ci">⚡</div><div class="dp-cl">Electrical</div></div><div class="dp-c"><div class="dp-ci">🏠</div><div class="dp-cl">Roofing</div></div></div>
+    </div>
+   </div>
+  </div>
+  <div class="modal-body">
+   <div class="modal-eyebrow">Case Study · Web Design, Brand & PWA</div>
+   <h2 class="modal-title">DP Construction <em>&</em> Maintenance</h2>
+   <div class="modal-overview">
+    <div class="ov-item"><div class="ov-label">Client</div><div class="ov-val">DP Construction</div></div>
+    <div class="ov-item"><div class="ov-label">Platform</div><div class="ov-val">Web + PWA</div></div>
+    <div class="ov-item"><div class="ov-label">Location</div><div class="ov-val">Port Elizabeth, ZA</div></div>
+    <div class="ov-item"><div class="ov-label">Built in</div><div class="ov-val">HTML · CSS · JS</div></div>
+   </div>
+   <div class="modal-sec">
+    <h3 class="modal-sec-title">The <em>Brief</em></h3>
+    <p class="modal-p">DP Construction & Maintenance needed a full digital presence from scratch — a brand identity that felt bold and professional, a website that would generate leads, and a Progressive Web App so customers could access the business from their phone like a native app. The solution needed to serve Despatch, Uitenhage, and Port Elizabeth, and convert visitors into real quote enquiries.</p>
+   </div>
+   <div class="modal-sec">
+    <h3 class="modal-sec-title">What Was <em>Built</em></h3>
+    <div class="modal-cols">
+     <ul class="modal-list"><li>Brand identity — logo, colour palette (DP orange + dark), typography system</li><li>Responsive full website with service listings, contact forms, and quote request flow</li><li>Progressive Web App (PWA) — installable on mobile with offline support and splash screen</li></ul>
+     <ul class="modal-list"><li>Dark-mode aware design that adapts to user system preference automatically</li><li>Animated hero, scroll-triggered sections, and smooth navigation throughout</li><li>Print-ready marketing collateral — bold posters and flyers for local distribution</li></ul>
+    </div>
+   </div>
+   <div class="modal-sec">
+    <h3 class="modal-sec-title">Key <em>Screens</em></h3>
+    <div class="screen-grid">
+     <div class="screen-item"><div class="screen-preview" style="background:#111118"><div style="width:85%"><div class="dp-nav"><span class="dp-brand" style="font-size:7px">DP <span>Construction</span></span></div><div class="dp-hero-bar" style="height:48px"><div class="dp-headline" style="font-size:9px">Renovation &<br/>Construction Solutions</div></div></div></div><div class="screen-cap"><div class="screen-cap-title">Hero / Landing</div><div class="screen-cap-desc">Bold brand-first hero with clear call-to-action</div></div></div>
+     <div class="screen-item"><div class="screen-preview" style="background:#1c1c26"><div class="dp-cards" style="width:85%;grid-template-columns:repeat(3,1fr);padding:8px;background:transparent"><div class="dp-c"><div class="dp-ci">🧱</div><div class="dp-cl">Building</div></div><div class="dp-c"><div class="dp-ci">🎨</div><div class="dp-cl">Painting</div></div><div class="dp-c"><div class="dp-ci">🏠</div><div class="dp-cl">Paving</div></div></div></div><div class="screen-cap"><div class="screen-cap-title">Services Grid</div><div class="screen-cap-desc">Visual service cards for fast navigation</div></div></div>
+     <div class="screen-item"><div class="screen-preview" style="background:#1c1c26"><div style="width:80%;display:flex;flex-direction:column;gap:5px"><div style="font-size:8px;color:rgba(255,255,255,.5);font-weight:700;text-transform:uppercase;letter-spacing:.05em">Get a Free Quote</div><div style="height:14px;background:rgba(255,255,255,.06);border-radius:3px"></div><div style="height:14px;background:rgba(255,255,255,.06);border-radius:3px"></div><div style="height:26px;background:rgba(255,255,255,.06);border-radius:3px"></div><div style="height:14px;background:#E8420A;border-radius:3px;display:flex;align-items:center;justify-content:center"><span style="font-size:7px;color:#fff;font-weight:700">SUBMIT ENQUIRY</span></div></div></div><div class="screen-cap"><div class="screen-cap-title">Quote Form</div><div class="screen-cap-desc">Lead generation form with service selection</div></div></div>
+     <div class="screen-item"><div class="screen-preview" style="background:#1c1c26"><div style="display:flex;flex-direction:column;align-items:center;gap:8px"><div style="width:48px;height:48px;background:#E8420A;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:20px;color:#fff;font-weight:900">DP</div><div style="font-size:8px;color:rgba(255,255,255,.6);font-weight:700;text-align:center">DP Construction<br/>&amp; Maintenance</div><div style="width:70px;height:3px;background:#E8420A;border-radius:2px"></div><div style="font-size:7px;color:rgba(255,255,255,.3)">Installing...</div></div></div><div class="screen-cap"><div class="screen-cap-title">PWA Splash Screen</div><div class="screen-cap-desc">Native app install experience on mobile</div></div></div>
+    </div>
+   </div>
+   <div class="modal-sec">
+    <div class="outcome-box"><div class="outcome-title">Deliverables</div>
+     <ul class="modal-list">
+      <li>Full brand system — logo, colour palette, typography — deployable across digital and print</li>
+      <li>Responsive website with dark-mode, scroll animations, and quote request functionality</li>
+      <li>Installable PWA with offline support, app icon, and native splash screen</li>
+      <li>Print-ready marketing collateral — posters and flyers for local distribution in Port Elizabeth</li>
+     </ul>
+    </div>
+   </div>
+   <div class="modal-tags"><span class="modal-tag">HTML/CSS/JS</span><span class="modal-tag">PWA</span><span class="modal-tag">Brand Identity</span><span class="modal-tag">Responsive Design</span><span class="modal-tag">Print Design</span><span class="modal-tag">Lead Generation</span></div>
+  </div>
+ </div>
+</div>
+
+<!-- SOCIAL MEDIA -->
+<div class="modal-overlay" id="modal-social" onclick="maybeClose(event,'modal-social')">
+ <div class="modal">
+  <div class="modal-close-row"><button class="modal-close-btn" onclick="closeModal('modal-social')">✕</button></div>
+  <div class="modal-hero" style="background:linear-gradient(160deg,#050012,#150030)">
+   <div class="modal-hero-inner">
+    <div style="width:100%;border-radius:10px;overflow:hidden;box-shadow:0 16px 48px rgba(0,0,0,.5)">
+     <div style="height:40px;background:#0a0015;display:flex;align-items:center;padding:0 14px;gap:10px"><div style="width:26px;height:26px;border-radius:50%;background:linear-gradient(135deg,#9333ea,#ec4899)"></div><span style="font-size:10px;color:rgba(255,255,255,.6);font-weight:600">Social Media & Content Creation</span></div>
+     <div style="padding:10px;background:#050012;display:grid;grid-template-columns:repeat(4,1fr);gap:5px"><div style="border-radius:6px;aspect-ratio:1;background:linear-gradient(135deg,#9333ea,#ec4899)"></div><div style="border-radius:6px;aspect-ratio:1;background:linear-gradient(135deg,#3b82f6,#06b6d4)"></div><div style="border-radius:6px;aspect-ratio:1;background:linear-gradient(135deg,#f59e0b,#ef4444)"></div><div style="border-radius:6px;aspect-ratio:1;background:linear-gradient(135deg,#10b981,#3b82f6)"></div><div style="border-radius:6px;aspect-ratio:1;background:linear-gradient(135deg,#ec4899,#f59e0b)"></div><div style="border-radius:6px;aspect-ratio:1;background:linear-gradient(135deg,#8b5cf6,#10b981)"></div><div style="border-radius:6px;aspect-ratio:1;background:linear-gradient(135deg,#9333ea,#ec4899);opacity:.5"></div><div style="border-radius:6px;aspect-ratio:1;background:linear-gradient(135deg,#3b82f6,#06b6d4);opacity:.5"></div></div>
+    </div>
+   </div>
+  </div>
+  <div class="modal-body">
+   <div class="modal-eyebrow">Capability · Content Creation & Social Media</div>
+   <h2 class="modal-title">Social Media & <em>Content</em> Creation</h2>
+   <div class="modal-sec">
+    <h3 class="modal-sec-title">What I <em>Create</em></h3>
+    <p class="modal-p">Content creation is where design, storytelling, and strategy converge. I produce end-to-end social media content — from concept through to final export — for LinkedIn, Instagram, Facebook, and YouTube across multiple clients and industries.</p>
+    <div class="modal-cols">
+     <ul class="modal-list"><li>Static social graphics — posts, stories, banners, and ads within brand guidelines</li><li>Short-form video content and reels — scripted, filmed, edited, and colour-graded</li><li>Motion graphics and animated posts using After Effects</li></ul>
+     <ul class="modal-list"><li>Campaign asset suites — consistent across all formats and platforms</li><li>Photography for product, team, and event content</li><li>Storyboards and scripts for video and multimedia productions</li></ul>
+    </div>
+   </div>
+   <div class="modal-sec">
+    <h3 class="modal-sec-title">My <em>Process</em></h3>
+    <div class="modal-steps">
+     <div class="modal-step"><div class="step-circle">01</div><div><div class="step-name">Strategy & Brief</div><div class="step-detail">Understanding the brand, audience, campaign goals, and platform nuances before creating a single asset.</div></div></div>
+     <div class="modal-step"><div class="step-circle">02</div><div><div class="step-name">Concept & Scripting</div><div class="step-detail">Rough storyboards, copy drafts, and creative direction — aligning visual and written voice before production.</div></div></div>
+     <div class="modal-step"><div class="step-circle">03</div><div><div class="step-name">Production</div><div class="step-detail">Design in Illustrator/Photoshop, filming and photography on-location, motion work in After Effects and Premiere Pro.</div></div></div>
+     <div class="modal-step"><div class="step-circle">04</div><div><div class="step-name">Publish & Report</div><div class="step-detail">Platform-optimised exports, scheduling, and basic analytics review to inform the next content cycle.</div></div></div>
+    </div>
+   </div>
+   <div class="modal-sec">
+    <div class="outcome-box"><div class="outcome-title">Platforms & Software</div>
+     <ul class="modal-list">
+      <li>Platforms managed: LinkedIn · Instagram · Facebook · YouTube</li>
+      <li>Design: Adobe Illustrator · Photoshop · InDesign · Figma</li>
+      <li>Video: Premiere Pro · After Effects (sound editing · colour grading · motion graphics)</li>
+     </ul>
+    </div>
+   </div>
+   <div class="modal-tags"><span class="modal-tag">Illustrator</span><span class="modal-tag">Photoshop</span><span class="modal-tag">Premiere Pro</span><span class="modal-tag">After Effects</span><span class="modal-tag">Content Strategy</span><span class="modal-tag">Motion Graphics</span><span class="modal-tag">Photography</span></div>
+  </div>
+ </div>
+</div>
+
+<!-- BRAND IDENTITY -->
+<div class="modal-overlay" id="modal-brand" onclick="maybeClose(event,'modal-brand')">
+ <div class="modal">
+  <div class="modal-close-row"><button class="modal-close-btn" onclick="closeModal('modal-brand')">✕</button></div>
+  <div class="modal-hero" style="background:linear-gradient(160deg,#001508,#002510)">
+   <div class="modal-hero-inner">
+    <div style="width:100%;border-radius:10px;overflow:hidden;box-shadow:0 16px 48px rgba(0,0,0,.5)">
+     <div style="padding:18px 20px;background:#001508;display:flex;flex-direction:column;gap:12px">
+      <div style="display:flex;gap:14px;align-items:center"><div style="width:48px;height:48px;background:#fff;border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:900;color:#E8420A">DP</div><div><div style="font-size:13px;color:#fff;font-weight:800">DP Construction</div><div style="font-size:9px;color:rgba(255,255,255,.4)">Brand Identity System</div></div></div>
+      <div style="display:flex;gap:7px"><div style="background:#E8420A;height:26px;flex:1;border-radius:4px"></div><div style="background:#111118;height:26px;flex:1;border-radius:4px"></div><div style="background:#fff;height:26px;flex:1;border-radius:4px;border:1px solid rgba(255,255,255,.1)"></div></div>
+      <div style="display:flex;gap:8px"><div style="background:rgba(255,255,255,.05);border-radius:6px;padding:8px 10px;flex:1"><div style="font-size:13px;color:#fff;font-weight:900;font-family:serif;font-style:italic">Aa</div><div style="font-size:7px;color:rgba(255,255,255,.3)">Display / Headings</div></div><div style="background:rgba(255,255,255,.05);border-radius:6px;padding:8px 10px;flex:1"><div style="font-size:13px;color:#fff;font-weight:500">Aa</div><div style="font-size:7px;color:rgba(255,255,255,.3)">Body / UI</div></div></div>
+     </div>
+    </div>
+   </div>
+  </div>
+  <div class="modal-body">
+   <div class="modal-eyebrow">Capability · Brand Identity & Print Design</div>
+   <h2 class="modal-title">Brand Identity & <em>Marketing</em> Materials</h2>
+   <div class="modal-sec">
+    <h3 class="modal-sec-title">What I <em>Deliver</em></h3>
+    <p class="modal-p">I create cohesive brand identities from the ground up and extend them across every touchpoint a business needs. From the initial logo concept through to print-ready marketing collateral, every element is designed to work together and represent the brand consistently at its best.</p>
+    <div class="modal-cols">
+     <ul class="modal-list"><li>Logo design and brand mark development across multiple concepts</li><li>Colour palette selection — primary, secondary, and accent systems</li><li>Typography systems pairing display and body typefaces for consistency</li><li>Brand guidelines documenting usage rules for all elements</li></ul>
+     <ul class="modal-list"><li>Marketing materials — brochures, posters, banners, flyers, stickers</li><li>Presentation templates in PowerPoint and Figma for ongoing team use</li><li>Infographics and illustrations communicating complex ideas visually</li><li>Asset library management and ongoing brand custodianship</li></ul>
+    </div>
+   </div>
+   <div class="modal-sec">
+    <h3 class="modal-sec-title">DP Construction — Brand <em>Example</em></h3>
+    <p class="modal-p">Full brand identity from scratch: an angular DP logomark set on a house icon, a bold orange and dark palette reflecting the construction industry, condensed sans-serif typography for impact, and a suite of print-ready materials for local distribution in Port Elizabeth.</p>
+    <div class="screen-grid">
+     <div class="screen-item"><div class="screen-preview" style="background:#111118"><div style="display:flex;flex-direction:column;align-items:center;gap:8px"><div style="font-size:26px;font-weight:900;color:#E8420A;letter-spacing:-.02em">DP</div><div style="font-size:10px;font-weight:900;color:#fff;text-transform:uppercase;letter-spacing:.1em;text-align:center">Construction<br/>&amp; Maintenance</div><div style="display:flex;gap:6px;margin-top:4px"><div style="width:14px;height:14px;background:#E8420A;border-radius:2px"></div><div style="width:14px;height:14px;background:#111118;border-radius:2px;border:1px solid rgba(255,255,255,.2)"></div><div style="width:14px;height:14px;background:#fff;border-radius:2px"></div></div></div></div><div class="screen-cap"><div class="screen-cap-title">Logo & Colour Palette</div><div class="screen-cap-desc">Bold, industry-appropriate brand mark</div></div></div>
+     <div class="screen-item"><div class="screen-preview" style="background:#111118;padding:10px"><div style="background:#E8420A;padding:10px;border-radius:6px;text-align:center;width:90%"><div style="font-size:10px;font-weight:900;color:#fff;text-transform:uppercase">Renovation &</div><div style="font-size:14px;font-weight:900;color:#fff;text-transform:uppercase">Construction</div><div style="font-size:7px;color:rgba(255,255,255,.7);margin-top:4px">Building · Finishing · Design</div><div style="font-size:9px;font-weight:700;color:#fff;margin-top:8px">Call for a FREE Quotation</div></div></div><div class="screen-cap"><div class="screen-cap-title">Marketing Poster</div><div class="screen-cap-desc">Print-ready collateral for local distribution</div></div></div>
+    </div>
+   </div>
+   <div class="modal-sec">
+    <div class="outcome-box"><div class="outcome-title">Design Software</div>
+     <ul class="modal-list">
+      <li>Vector and logo work: Adobe Illustrator</li>
+      <li>Photo manipulation and raster artwork: Adobe Photoshop</li>
+      <li>Print layout and multi-page documents: Adobe InDesign</li>
+      <li>Digital and UI brand applications: Figma</li>
+     </ul>
+    </div>
+   </div>
+   <div class="modal-tags"><span class="modal-tag">Illustrator</span><span class="modal-tag">InDesign</span><span class="modal-tag">Photoshop</span><span class="modal-tag">Logo Design</span><span class="modal-tag">Print Design</span><span class="modal-tag">Brand Guidelines</span><span class="modal-tag">Figma</span></div>
+  </div>
+ </div>
+</div>
+
+<script>
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if(e.isIntersecting){ setTimeout(()=>e.target.classList.add('visible'),80); obs.unobserve(e.target) } })
+},{threshold:0.08});
+document.querySelectorAll('.fade-up').forEach((el,i)=>{ el.style.transitionDelay=(i%4)*70+'ms'; obs.observe(el) });
+
+function openModal(id){
+  const el=document.getElementById('modal-'+id);
+  el.classList.add('open');
+  el.scrollTop=0;
+  document.body.style.overflow='hidden';
+}
+function closeModal(id){
+  document.getElementById('modal-'+id).classList.remove('open');
+  document.body.style.overflow='';
+}
+function maybeClose(e,id){
+  if(e.target===document.getElementById(id)) closeModal(id);
+}
+document.addEventListener('keydown',e=>{
+  if(e.key==='Escape') document.querySelectorAll('.modal-overlay.open').forEach(m=>{ m.classList.remove('open'); document.body.style.overflow='' });
+});
+</script>
+<script>
+function openModal(id) {
+  document.getElementById('modal-' + id).classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeModal(id) {
+  document.getElementById(id).classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+function maybeClose(event, id) {
+  if (event.target.id === id) {
+    closeModal(id);
+  }
+}
+</script>
+</body>
+</html>
