@@ -398,6 +398,15 @@ const obs = new IntersectionObserver(entries => {
 },{threshold:0.08});
 document.querySelectorAll('.fade-up').forEach((el,i)=>{ el.style.transitionDelay=(i%4)*70+'ms'; obs.observe(el) });
 
+// Force scroll to top on refresh
+if (history.scrollRestoration) {
+  history.scrollRestoration = 'manual';
+} else {
+  window.onload = function () {
+    window.scrollTo(0, 0);
+  };
+}
+
 function openModal(id){
   const el=document.getElementById('modal-'+id);
   if(el){
