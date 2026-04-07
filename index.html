@@ -96,6 +96,25 @@ section{padding:90px 6vw}
 .fe-icon{height:30px;background:linear-gradient(135deg,rgba(200,16,46,.15),rgba(200,16,46,.3));border-radius:4px;margin-bottom:5px;display:flex;align-items:center;justify-content:center;font-size:12px}
 .fe-pname{font-size:6px;color:rgba(255,255,255,.4);margin-bottom:3px}
 .fe-price{font-size:8px;color:#c8102e;font-weight:700}
+.cy-head{height:32px;background:#061525;display:flex;align-items:center;padding:0 10px;gap:7px}
+.cy-alive{width:6px;height:6px;border-radius:50%;background:#22c55e;animation:pulse 2s infinite}
+.cy-htxt{font-size:8px;color:rgba(255,255,255,.5);font-weight:600}
+.cy-body{background:#0d2845;padding:10px;display:grid;grid-template-columns:1fr 1fr;gap:7px}
+.cy-stat{background:rgba(255,255,255,.04);border-radius:7px;padding:8px}
+.cy-val{font-size:16px;font-weight:800;color:#fff;line-height:1}
+.cy-label{font-size:6px;color:rgba(255,255,255,.35);margin-top:2px}
+.cy-map{grid-column:span 2;display:grid;grid-template-columns:repeat(10,1fr);gap:2px}
+.cy-cell{height:10px;border-radius:1px}
+.cy-cell.f{background:#3b82f6}.cy-cell.e{background:rgba(255,255,255,.07)}.cy-cell.r{background:#22c55e}
+.dp-nav{height:34px;background:rgba(17,17,24,.95);border-bottom:1.5px solid rgba(232,66,10,.4);display:flex;align-items:center;justify-content:space-between;padding:0 12px}
+.dp-brand{font-size:8px;font-weight:900;color:#fff;letter-spacing:.06em;text-transform:uppercase}
+.dp-brand span{color:#E8420A}
+.dp-hero-bar{height:64px;background:#E8420A;display:flex;align-items:center;padding:0 12px}
+.dp-headline{font-size:11px;font-weight:900;color:#fff;line-height:1.2;text-transform:uppercase}
+.dp-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:5px;padding:8px;background:#111118}
+.dp-c{background:rgba(255,255,255,.04);border-radius:5px;padding:6px;border:1px solid rgba(255,255,255,.05);text-align:center}
+.dp-ci{font-size:12px;margin-bottom:2px}
+.dp-cl{font-size:6px;color:rgba(255,255,255,.35)}
 
 /* WORK */
 #work{background:var(--card)}
@@ -127,6 +146,7 @@ section{padding:90px 6vw}
 .modal-close-btn{width:36px;height:36px;border-radius:50%;background:var(--warm);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:16px;color:var(--ink2);transition:background .2s;pointer-events:all;flex-shrink:0}
 .modal-close-btn:hover{background:var(--ink);color:#fff}
 .modal-hero{height:300px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.modal-hero-inner{width:72%;max-width:520px}
 .modal-body{padding:40px 48px 56px}
 .modal-eyebrow{font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--accent2);margin-bottom:12px}
 .modal-title{font-family:'Playfair Display',serif;font-size:34px;font-weight:900;letter-spacing:-.03em;line-height:1.05;margin-bottom:20px}
@@ -150,12 +170,18 @@ section{padding:90px 6vw}
 .step-circle{width:42px;height:42px;border-radius:50%;background:var(--warm);border:1.5px solid var(--accent);display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:15px;font-weight:900;color:var(--accent2);flex-shrink:0}
 .step-name{font-size:14px;font-weight:700;margin-bottom:3px}
 .step-detail{font-size:13px;font-weight:300;color:var(--ink2);line-height:1.6}
+.screen-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:20px 0}
+.screen-item{border-radius:12px;overflow:hidden;border:1px solid var(--border)}
+.screen-preview{height:148px;display:flex;align-items:center;justify-content:center}
+.screen-cap{padding:11px 14px;background:var(--warm)}
+.screen-cap-title{font-size:12px;font-weight:700;color:var(--ink)}
+.screen-cap-desc{font-size:11px;color:var(--ink3);margin-top:2px}
 .outcome-box{background:var(--warm);border-radius:14px;padding:26px;border:1px solid rgba(200,169,110,.3)}
 .outcome-title{font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--accent2);margin-bottom:12px}
 .modal-tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}
 .modal-tag{font-size:11px;font-weight:600;padding:5px 14px;border-radius:50px;border:1.5px solid rgba(122,79,45,.2);color:var(--accent2);background:var(--warm)}
 
-/* ABOUT, SERVICES, CONTACT, ANIMATIONS - SAME AS ORIGINAL */
+/* ABOUT */
 #about{background:var(--cream)}
 .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;max-width:1100px;margin:0 auto}
 .about-p{font-size:16px;font-weight:300;line-height:1.8;color:var(--ink2);margin-bottom:18px}
@@ -170,6 +196,8 @@ section{padding:90px 6vw}
 .portrait-txt{font-size:11px;color:var(--ink3);font-weight:500;letter-spacing:.04em}
 .skill-pills{display:flex;flex-wrap:wrap;gap:8px}
 .skill-pill{font-size:11px;font-weight:600;padding:5px 14px;border-radius:50px;border:1.5px solid rgba(122,79,45,.2);color:var(--accent2);background:var(--card)}
+
+/* SERVICES */
 #services{background:var(--ink)}
 #services .section-eyebrow{color:var(--accent)}
 #services .section-eyebrow::after{background:var(--accent)}
@@ -180,6 +208,8 @@ section{padding:90px 6vw}
 .svc-icon{font-size:24px;margin-bottom:16px}
 .svc-name{font-family:'Playfair Display',serif;font-size:18px;font-weight:700;color:#fff;margin-bottom:8px}
 .svc-desc{font-size:13px;color:rgba(255,255,255,.4);line-height:1.7;font-weight:300}
+
+/* CONTACT */
 #contact{background:var(--cream)}
 .contact-card{max-width:620px;margin:44px auto 0;background:var(--card);border-radius:26px;padding:50px;text-align:center;box-shadow:0 20px 80px rgba(0,0,0,.07);border:1px solid var(--border)}
 .contact-h{font-family:'Playfair Display',serif;font-size:32px;font-weight:900;margin-bottom:14px;letter-spacing:-.03em}
@@ -195,6 +225,8 @@ footer{background:var(--ink);padding:26px 6vw;display:flex;justify-content:space
 .footer-logo{font-family:'Playfair Display',serif;font-size:16px;font-weight:700;color:#fff}
 .footer-logo em{font-style:italic;color:var(--accent)}
 .footer-c{font-size:12px;color:rgba(255,255,255,.3)}
+
+/* ANIM */
 .fade-up{opacity:0;transform:translateY(26px);transition:opacity .6s ease,transform .6s ease}
 .fade-up.visible{opacity:1;transform:translateY(0)}
 
@@ -203,7 +235,7 @@ footer{background:var(--ink);padding:26px 6vw;display:flex;justify-content:space
   .about-grid{grid-template-columns:1fr}.modal-body{padding:22px 22px 40px}
   .modal-overview{grid-template-columns:1fr 1fr}.ov-item:nth-child(2){border-right:none}
   .ov-item:nth-child(3){border-top:1px solid var(--border)}.modal-cols{grid-template-columns:1fr}
-  .nav-links{display:none}
+  .screen-grid{grid-template-columns:1fr}.nav-links{display:none}
   .projects-grid{grid-template-columns:1fr}.services-grid{grid-template-columns:1fr 1fr}
   footer{flex-direction:column;gap:10px;text-align:center}
 }
@@ -225,7 +257,7 @@ footer{background:var(--ink);padding:26px 6vw;display:flex;justify-content:space
   <div class="hero-content">
     <div class="hero-badge"><div class="hero-dot"></div><span>Available for new projects</span></div>
     <h1 class="hero-title">Design that<br/><em>thinks</em> and<br/>feels right.</h1>
-    <p class="hero-sub">UX/UI Designer & Creative — translating complex systems into clear, intuitive experiences across enterprise, luxury, and web platforms.</p>
+    <p class="hero-sub">UX/UI Designer & Creative — translating complex systems into clear, intuitive experiences across enterprise, luxury, logistics, and brand.</p>
     <div class="hero-btns">
       <a href="#work" class="btn-primary">View My Work</a>
       <a href="#contact" class="btn-outline">Get in Touch</a>
@@ -240,7 +272,7 @@ footer{background:var(--ink);padding:26px 6vw;display:flex;justify-content:space
         <div class="hvc-screen s4">🏗️</div>
       </div>
       <div class="hvc-label">
-        <h3>Featured Projects</h3>
+        <h3>6 Projects · 4 Industries</h3>
         <span class="hvc-tag">UX/UI · Brand · Web</span>
       </div>
       <div class="hero-float">Click any<br/>card to<br/>explore →</div>
@@ -250,71 +282,48 @@ footer{background:var(--ink);padding:26px 6vw;display:flex;justify-content:space
 
 <div class="ticker">
   <div class="ticker-track">
-    <span class="tick-item">Figma</span><span class="tick-sep">·</span><span class="tick-item">UX Strategy</span><span class="tick-sep">·</span><span class="tick-item">UI Design</span><span class="tick-sep">·</span><span class="tick-item">Prototyping</span><span class="tick-sep">·</span><span class="tick-item">Brand Identity</span>
-    <span class="tick-item">Figma</span><span class="tick-sep">·</span><span class="tick-item">UX Strategy</span><span class="tick-sep">·</span><span class="tick-item">UI Design</span><span class="tick-sep">·</span><span class="tick-item">Prototyping</span><span class="tick-sep">·</span><span class="tick-item">Brand Identity</span>
+    <span class="tick-item">Figma</span><span class="tick-sep">·</span><span class="tick-item">UX Strategy</span><span class="tick-sep">·</span><span class="tick-item">UI Design</span><span class="tick-sep">·</span><span class="tick-item">Adobe Illustrator</span><span class="tick-sep">·</span><span class="tick-item">Photoshop</span><span class="tick-sep">·</span><span class="tick-item">Premiere Pro</span><span class="tick-sep">·</span><span class="tick-item">After Effects</span><span class="tick-sep">·</span><span class="tick-item">WordPress</span><span class="tick-sep">·</span><span class="tick-item">Prototyping</span><span class="tick-sep">·</span><span class="tick-item">Brand Identity</span><span class="tick-sep">·</span><span class="tick-item">Motion Graphics</span><span class="tick-sep">·</span><span class="tick-item">Photography</span><span class="tick-sep">·</span><span class="tick-item">Video Editing</span><span class="tick-sep">·</span><span class="tick-item">Social Media</span><span class="tick-sep">·</span><span class="tick-item">InDesign</span><span class="tick-sep">·</span>
+    <span class="tick-item">Figma</span><span class="tick-sep">·</span><span class="tick-item">UX Strategy</span><span class="tick-sep">·</span><span class="tick-item">UI Design</span><span class="tick-sep">·</span><span class="tick-item">Adobe Illustrator</span><span class="tick-sep">·</span><span class="tick-item">Photoshop</span><span class="tick-sep">·</span><span class="tick-item">Premiere Pro</span><span class="tick-sep">·</span><span class="tick-item">After Effects</span><span class="tick-sep">·</span><span class="tick-item">WordPress</span><span class="tick-sep">·</span><span class="tick-item">Prototyping</span><span class="tick-sep">·</span><span class="tick-item">Brand Identity</span><span class="tick-sep">·</span><span class="tick-item">Motion Graphics</span><span class="tick-sep">·</span><span class="tick-item">Photography</span><span class="tick-sep">·</span><span class="tick-item">Video Editing</span><span class="tick-sep">·</span><span class="tick-item">Social Media</span><span class="tick-sep">·</span><span class="tick-item">InDesign</span><span class="tick-sep">·</span>
   </div>
 </div>
 
 <section id="work">
-  <div class="section-eyebrow">Case Studies</div>
-  <h2 class="section-h">Selected <em>Work</em></h2>
-  <p class="section-sub">A collection of projects spanning enterprise software, high-end e-commerce, and logistics management.</p>
-
+  <div class="fade-up">
+    <div class="section-eyebrow">Selected Work</div>
+    <h2 class="section-h">Projects that <em>solve real</em> problems</h2>
+    <p class="section-sub">Click any project card to explore the full case study — problem, process, key screens, and outcomes.</p>
+  </div>
   <div class="projects-grid">
-    
-    <div class="proj-card fade-up" onclick="openModal('tickets')">
-      <div class="proj-thumb" style="background:linear-gradient(135deg,#12122a,#1e1e3f)">
+
+    <div class="proj-card fade-up" onclick="window.open('ticketsystem.pdf', '_blank')">
+      <div class="proj-thumb" style="background:linear-gradient(160deg,#0f0f1a,#1a1a35)">
         <div class="mini-ui">
-          <div class="tu-bar">
-            <div class="tu-bar-dot r"></div><div class="tu-bar-dot y"></div><div class="tu-bar-dot g"></div>
-            <div class="tu-bar-nav a">DASHBOARD</div>
-            <div class="tu-bar-nav">TICKETS</div>
-          </div>
+          <div class="tu-bar"><div class="tu-bar-dot r"></div><div class="tu-bar-dot y"></div><div class="tu-bar-dot g"></div><span class="tu-bar-nav a">Dashboard</span><span class="tu-bar-nav">Tickets</span><span class="tu-bar-nav">Reports</span></div>
           <div class="tu-body">
-            <div class="tu-row"><div class="tu-txt">#1022 - Software License</div><div class="tu-badge p">Pending</div></div>
-            <div class="tu-row"><div class="tu-txt">#1021 - Hardware Repair</div><div class="tu-badge d">Done</div></div>
-            <div class="tu-row"><div class="tu-txt">#1020 - Access Request</div><div class="tu-badge h">High</div></div>
+            <div class="tu-row"><span class="tu-txt">T001: Software License Request</span><span class="tu-badge p">Pending</span></div>
+            <div class="tu-row"><span class="tu-txt">T002: Security Audit</span><span class="tu-badge h">High</span></div>
+            <div class="tu-row"><span class="tu-txt">T003: System Migration</span><span class="tu-badge d">Done</span></div>
+            <div class="tu-row"><span class="tu-txt">T004: User Training</span><span class="tu-badge p">Pending</span></div>
           </div>
         </div>
         <div class="proj-cta">View Case Study →</div>
       </div>
       <div class="proj-info">
-        <div class="proj-tags"><span class="tag">UX/UI</span><span class="tag">Enterprise</span><span class="tag">Internal Tool</span></div>
+        <div class="proj-tags"><span class="tag">UX/UI</span><span class="tag">Enterprise</span><span class="tag">Web App</span></div>
         <h3 class="proj-title">Internal Ticket Desk System</h3>
-        <p class="proj-desc">A specialized internal tool designed to help employees log and manage support requests efficiently across multiple departments.</p>
-        <div class="proj-footer">
-          <div class="proj-meta-row">
-            <div class="proj-meta"><strong>8 Weeks</strong>Timeline</div>
-            <div class="proj-meta"><strong>Internal</strong>Client</div>
-          </div>
-          <div class="proj-arrow">→</div>
-        </div>
+        <p class="proj-desc">Redesigning a complex support system to reduce cognitive load, improve ticket visibility, and support multiple user roles in one interface.</p>
+        <div class="proj-footer"><div class="proj-meta-row"><div class="proj-meta"><strong>6 Months</strong>Timeline</div><div class="proj-meta"><strong>Enterprise</strong>Client</div></div><div class="proj-arrow">→</div></div>
       </div>
     </div>
 
     <div class="proj-card fade-up" onclick="openModal('ferrari')">
-      <div class="proj-thumb" style="background:linear-gradient(160deg,#0a0a0a,#1a0a0a)">
+      <div class="proj-thumb" style="background:linear-gradient(160deg,#100005,#250010)">
         <div class="mini-ui">
-          <div class="fe-head">
-            <div class="fe-circle">F</div>
-            <span class="fe-htxt">DEALER PORTAL</span>
-          </div>
+          <div class="fe-head"><div class="fe-circle">F</div><span class="fe-htxt">Ferrari Dealer Portal</span></div>
           <div class="fe-body">
-            <div class="fe-prod">
-              <div class="fe-icon">🛠️</div>
-              <div class="fe-pname">Diag Tool v2</div>
-              <div class="fe-price">€4,250.00</div>
-            </div>
-            <div class="fe-prod">
-              <div class="fe-icon">🔑</div>
-              <div class="fe-pname">ECU License</div>
-              <div class="fe-price">€890.00</div>
-            </div>
-            <div class="fe-prod">
-              <div class="fe-icon">⚙️</div>
-              <div class="fe-pname">Brake Assy</div>
-              <div class="fe-price">€1,120.00</div>
-            </div>
+            <div class="fe-prod"><div class="fe-icon">🔧</div><div class="fe-pname">Diagnostic DT-4</div><div class="fe-price">€850</div></div>
+            <div class="fe-prod"><div class="fe-icon">⚙️</div><div class="fe-pname">Spare Part 2</div><div class="fe-price">€5,000</div></div>
+            <div class="fe-prod"><div class="fe-icon">📋</div><div class="fe-pname">Dealer License</div><div class="fe-price">€10,000</div></div>
           </div>
         </div>
         <div class="proj-cta">View Case Study →</div>
@@ -322,89 +331,231 @@ footer{background:var(--ink);padding:26px 6vw;display:flex;justify-content:space
       <div class="proj-info">
         <div class="proj-tags"><span class="tag">UX/UI</span><span class="tag">Luxury</span><span class="tag">E-Commerce</span></div>
         <h3 class="proj-title">Luxury Automotive Dealer Platform</h3>
-        <p class="proj-desc">A secure, high-performance web platform for authorized dealers to manage licenses, parts, and diagnostic tools.</p>
-        <div class="proj-footer">
-          <div class="proj-meta-row">
-            <div class="proj-meta"><strong>6 Weeks</strong>Timeline</div>
-            <div class="proj-meta"><strong>Confidential</strong>Client</div>
+        <p class="proj-desc">A secure dealer-only web platform for a luxury automotive manufacturer — streamlining tool, parts, and license purchasing with a premium interface.</p>
+        <div class="proj-footer"><div class="proj-meta-row"><div class="proj-meta"><strong>6 Weeks</strong>Timeline</div><div class="proj-meta"><strong>Confidential</strong>Client</div></div><div class="proj-arrow">→</div></div>
+      </div>
+    </div>
+
+    <div class="proj-card fade-up" onclick="openModal('cyms')">
+      <div class="proj-thumb" style="background:linear-gradient(160deg,#020e1f,#0a1f3a)">
+        <div class="mini-ui">
+          <div class="cy-head"><div class="cy-alive"></div><span class="cy-htxt">Ford Container Yard — Live</span></div>
+          <div class="cy-body">
+            <div class="cy-stat"><div class="cy-val">12,247</div><div class="cy-label">Processed Today</div></div>
+            <div class="cy-stat"><div class="cy-val" style="color:#22c55e">Live</div><div class="cy-label">Auto-refresh</div></div>
+            <div class="cy-map"><div class="cy-cell f"></div><div class="cy-cell f"></div><div class="cy-cell r"></div><div class="cy-cell e"></div><div class="cy-cell f"></div><div class="cy-cell e"></div><div class="cy-cell f"></div><div class="cy-cell r"></div><div class="cy-cell f"></div><div class="cy-cell e"></div></div>
           </div>
-          <div class="proj-arrow">→</div>
         </div>
+        <div class="proj-cta">View Case Study →</div>
+      </div>
+      <div class="proj-info">
+        <div class="proj-tags"><span class="tag">UX/UI</span><span class="tag">Logistics</span><span class="tag">Dashboard</span></div>
+        <h3 class="proj-title">Container Yard Management System</h3>
+        <p class="proj-desc">A unified CYMS for automotive logistics — real-time tracking, colour-coded yard maps, role-based access, and mobile-first operator workflows.</p>
+        <div class="proj-footer"><div class="proj-meta-row"><div class="proj-meta"><strong>1 Month</strong>Timeline</div><div class="proj-meta"><strong>Confidential</strong>Client</div></div><div class="proj-arrow">→</div></div>
+      </div>
+    </div>
+
+    <div class="proj-card fade-up" onclick="openModal('dpworld')">
+      <div class="proj-thumb" style="background:linear-gradient(160deg,#111118,#1a1a25)">
+        <div class="mini-ui">
+          <div class="dp-nav"><div class="dp-brand">DP <span>WORLD</span></div></div>
+          <div class="dp-hero-bar"><div class="dp-headline">Global Terminal<br/>Operator Portal</div></div>
+          <div class="dp-cards">
+            <div class="dp-c"><div class="dp-ci">🚢</div><div class="dp-cl">Vessel</div></div>
+            <div class="dp-c"><div class="dp-ci">📦</div><div class="dp-cl">Cargo</div></div>
+            <div class="dp-c"><div class="dp-ci">📊</div><div class="dp-cl">KPIs</div></div>
+          </div>
+        </div>
+        <div class="proj-cta">View Case Study →</div>
+      </div>
+      <div class="proj-info">
+        <div class="proj-tags"><span class="tag">UX/UI</span><span class="tag">Logistics</span><span class="tag">B2B Portal</span></div>
+        <h3 class="proj-title">Global Logistics Digital Strategy</h3>
+        <p class="proj-desc">Designing a high-performance terminal portal for global supply chains — focusing on data clarity, rapid action, and scalable design patterns.</p>
+        <div class="proj-footer"><div class="proj-meta-row"><div class="proj-meta"><strong>On-going</strong>Timeline</div><div class="proj-meta"><strong>Enterprise</strong>Client</div></div><div class="proj-arrow">→</div></div>
       </div>
     </div>
 
   </div>
 </section>
 
-<div id="modal-tickets" class="modal-overlay" onclick="maybeClose(event,'modal-tickets')">
+<section id="about">
+  <div class="about-grid">
+    <div class="fade-up">
+      <div class="section-eyebrow">About Me</div>
+      <h2 class="section-h">Designing with <em>purpose</em> and precision</h2>
+      <p class="about-p">I’m Nicole Kelsey, a UX/UI Designer based in the UK. I specialise in taking complex, data-heavy systems—from automotive logistics to enterprise support—and turning them into elegant, user-centric tools that feel effortless to use.</p>
+      <p class="about-p">My approach combines deep user research with high-fidelity visual design, ensuring that every interaction is both functional and aesthetically refined. I thrive at the intersection of enterprise efficiency and consumer-grade beauty.</p>
+      
+      <div class="skill-pills">
+        <span class="skill-pill">Figma</span><span class="skill-pill">UX Strategy</span><span class="skill-pill">UI Design</span><span class="skill-pill">Prototyping</span><span class="skill-pill">Design Systems</span><span class="skill-pill">User Research</span><span class="skill-pill">Adobe CC</span><span class="skill-pill">Brand Identity</span>
+      </div>
+
+      <div class="about-stats">
+        <div class="stat-card"><div class="stat-n">5<em>+</em></div><div class="stat-l">Years Experience</div></div>
+        <div class="stat-card"><div class="stat-n">20<em>+</em></div><div class="stat-l">Projects Shipped</div></div>
+      </div>
+    </div>
+    <div class="about-portrait fade-up">
+      <div class="portrait-ph">
+        <div class="portrait-init">NK</div>
+        <div class="portrait-txt">UK BASED · REMOTE READY</div>
+      </div>
+      <p class="about-p" style="font-size:14px;font-style:italic">"The best design is the one that disappears into the user's workflow while looking like a masterpiece."</p>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="fade-up">
+    <div class="section-eyebrow">Services</div>
+    <h2 class="section-h">Specialised <em>creative</em> solutions</h2>
+    <p class="section-sub" style="color:rgba(255,255,255,.5)">From initial research to final high-fidelity prototypes, I provide a full-spectrum design service for modern digital products.</p>
+  </div>
+  <div class="services-grid">
+    <div class="svc fade-up"><div class="svc-icon">📐</div><div class="svc-name">UX Strategy</div><div class="svc-desc">User journeys, wireframing, information architecture, and rigorous research to find the right path forward.</div></div>
+    <div class="svc fade-up"><div class="svc-icon">🎨</div><div class="svc-name">UI Design</div><div class="svc-desc">Pixel-perfect interfaces that align with your brand while maintaining accessibility and peak usability.</div></div>
+    <div class="svc fade-up"><div class="svc-icon">⚡</div><div class="svc-name">Prototyping</div><div class="svc-desc">Interactive, high-fidelity prototypes in Figma to test ideas and streamline development hand-offs.</div></div>
+    <div class="svc fade-up"><div class="svc-icon">💎</div><div class="svc-name">Branding</div><div class="svc-desc">Creating cohesive visual identities, logos, and design systems that scale across every touchpoint.</div></div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="contact-card fade-up">
+    <h2 class="contact-h">Ready to <em>elevate</em> your<br/>digital experience?</h2>
+    <p class="contact-p">I’m currently available for freelance opportunities or full-time roles. Let’s build something that makes an impact.</p>
+    <div class="contact-links">
+      <a href="mailto:nicole.kelsey@example.com" class="clink email">Send me an Email</a>
+      <a href="https://linkedin.com/in/nicolekelsey" class="clink li" target="_blank">Connect on LinkedIn</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-logo">Nicole <em>Kelsey</em></div>
+  <div class="footer-c">© 2024 Nicole Kelsey — All Rights Reserved. Designed with intent.</div>
+</footer>
+
+<div class="modal-overlay" id="modal-ferrari" onclick="maybeClose(event,'modal-ferrari')">
   <div class="modal">
-    <div class="modal-close-row"><div class="modal-close-btn" onclick="closeModal('tickets')">✕</div></div>
-    <div class="modal-hero" style="background:linear-gradient(135deg,#12122a,#1e1e3f)">
-       <div style="color:rgba(255,255,255,0.15); font-size:80px">🎫</div>
+    <div class="modal-close-row"><div class="modal-close-btn" onclick="closeModal('ferrari')">✕</div></div>
+    <div class="modal-hero" style="background:linear-gradient(135deg,#100005,#250010)">
+       <div class="modal-hero-inner">
+          <div class="fe-head"><div class="fe-circle">F</div><span class="fe-htxt">Ferrari Dealer Portal</span></div>
+          <div class="fe-body">
+            <div class="fe-prod"><div class="fe-icon">🔧</div><div class="fe-pname">Diagnostic DT-4</div><div class="fe-price">€850</div></div>
+            <div class="fe-prod"><div class="fe-icon">⚙️</div><div class="fe-pname">Spare Part 2</div><div class="fe-price">€5,000</div></div>
+            <div class="fe-prod"><div class="fe-icon">📋</div><div class="fe-pname">Dealer License</div><div class="fe-price">€10,000</div></div>
+          </div>
+       </div>
     </div>
     <div class="modal-body">
-      <div class="modal-eyebrow">Enterprise Solutions</div>
-      <h2 class="modal-title">Internal <em>Ticket Desk System</em></h2>
+      <div class="modal-eyebrow">Luxury E-Commerce</div>
+      <h2 class="modal-title">Luxury Automotive Dealer Platform</h2>
       <div class="modal-overview">
-        <div class="ov-item"><div class="ov-label">Role</div><div class="ov-val">Lead UX Designer</div></div>
-        <div class="ov-item"><div class="ov-label">Timeline</div><div class="ov-val">8 Weeks</div></div>
-        <div class="ov-item"><div class="ov-label">Client</div><div class="ov-val">Internal Tool</div></div>
-        <div class="ov-item"><div class="ov-label">Type</div><div class="ov-val">SaaS / Internal</div></div>
+        <div class="ov-item"><div class="ov-label">Role</div><div class="ov-val">Lead UX/UI</div></div>
+        <div class="ov-item"><div class="ov-label">Timeline</div><div class="ov-val">6 Weeks</div></div>
+        <div class="ov-item"><div class="ov-label">Industry</div><div class="ov-val">Luxury Auto</div></div>
+        <div class="ov-item"><div class="ov-label">Tools</div><div class="ov-val">Figma, Adobe CC</div></div>
       </div>
       <div class="modal-sec">
-        <h3 class="modal-sec-title">The <em>Problem</em></h3>
-        <p class="modal-p">Employees faced significant friction when logging support requests across multiple departments, leading to delayed resolution times and lack of transparency in the ticket lifecycle.</p>
+        <h3 class="modal-sec-title">Project <em>Overview</em></h3>
+        <p class="modal-p">Designing a secure, premium dealer-only web platform for a global luxury automotive manufacturer. The system needed to facilitate the procurement of specialized diagnostic tools, spare parts, and dealer licenses for authorized workshops globally.</p>
       </div>
       <div class="modal-sec">
-        <h3 class="modal-sec-title">UX Process & <em>Insights</em></h3>
-        <ul class="modal-list">
-          <li><strong>Employee Feedback:</strong> Identified manual entry and poor categorization as primary pain points.</li>
-          <li><strong>Cross-Department Mapping:</strong> Designed a unified system that handles diverse requests from IT to HR within one interface.</li>
-        </ul>
+        <h3 class="modal-sec-title">The <em>Challenge</em></h3>
+        <p class="modal-p">The existing system was fragmented and didn't reflect the premium nature of the brand. I needed to create a unified experience that simplified complex ordering workflows while maintaining strict security and authorization protocols.</p>
       </div>
       <div class="outcome-box">
-        <div class="outcome-title">Final Outcome</div>
-        <p class="modal-p" style="margin-bottom:0">Streamlined the internal support workflow, providing employees with a clear, efficient way to manage and track requests from submission to resolution.</p>
+        <div class="outcome-title">Impact & Outcome</div>
+        <p class="modal-p" style="margin-bottom:0">Successfully delivered a design that unified three separate purchasing channels into one streamlined interface, reducing dealer support requests and improving order accuracy.</p>
+      </div>
+      <div class="modal-tags">
+        <span class="modal-tag">UX Research</span><span class="modal-tag">Interface Design</span><span class="modal-tag">E-Commerce</span><span class="modal-tag">Luxury Brand</span>
       </div>
     </div>
   </div>
 </div>
 
-<div id="modal-ferrari" class="modal-overlay" onclick="maybeClose(event,'modal-ferrari')">
+<div class="modal-overlay" id="modal-cyms" onclick="maybeClose(event,'modal-cyms')">
   <div class="modal">
-    <div class="modal-close-row"><div class="modal-close-btn" onclick="closeModal('ferrari')">✕</div></div>
-    <div class="modal-hero" style="background:linear-gradient(160deg,#0a0a0a,#1a0a0a)">
-       <div style="color:rgba(255,255,255,0.15); font-size:80px">🏎️</div>
+    <div class="modal-close-row"><div class="modal-close-btn" onclick="closeModal('cyms')">✕</div></div>
+    <div class="modal-hero" style="background:linear-gradient(135deg,#020e1f,#0a1f3a)">
+       <div class="modal-hero-inner">
+          <div class="cy-head"><div class="cy-alive"></div><span class="cy-htxt">Ford Container Yard — Live</span></div>
+          <div class="cy-body">
+            <div class="cy-stat"><div class="cy-val">12,247</div><div class="cy-label">Processed Today</div></div>
+            <div class="cy-stat"><div class="cy-val" style="color:#22c55e">Live</div><div class="cy-label">Auto-refresh</div></div>
+            <div class="cy-map"><div class="cy-cell f"></div><div class="cy-cell f"></div><div class="cy-cell r"></div><div class="cy-cell e"></div><div class="cy-cell f"></div><div class="cy-cell e"></div><div class="cy-cell f"></div><div class="cy-cell r"></div><div class="cy-cell f"></div><div class="cy-cell e"></div></div>
+          </div>
+       </div>
     </div>
     <div class="modal-body">
-      <div class="modal-eyebrow">Luxury E-Commerce</div>
-      <h2 class="modal-title">Luxury Automotive <em>Dealer Platform</em></h2>
+      <div class="modal-eyebrow">Logistics & Data</div>
+      <h2 class="modal-title">Container Yard Management System</h2>
       <div class="modal-overview">
-        <div class="ov-item"><div class="ov-label">Role</div><div class="ov-val">UX/UI Designer</div></div>
-        <div class="ov-item"><div class="ov-label">Timeline</div><div class="ov-val">6 Weeks</div></div>
-        <div class="ov-item"><div class="ov-label">Client</div><div class="ov-val">Confidential</div></div>
-        <div class="ov-item"><div class="ov-label">Focus</div><div class="ov-val">B2B Sales</div></div>
+        <div class="ov-item"><div class="ov-label">Role</div><div class="ov-val">UX Designer</div></div>
+        <div class="ov-item"><div class="ov-label">Timeline</div><div class="ov-val">1 Month</div></div>
+        <div class="ov-item"><div class="ov-label">Industry</div><div class="ov-val">Logistics</div></div>
+        <div class="ov-item"><div class="ov-label">Client</div><div class="ov-val">Automotive Logistics</div></div>
       </div>
       <div class="modal-sec">
-        <h3 class="modal-sec-title">The <em>Problem</em></h3>
-        <p class="modal-p">Authorized dealers needed a secure, high-performance gateway to purchase specialized diagnostic tools, spare parts, and software licenses while maintaining a premium brand aesthetic.</p>
+        <h3 class="modal-sec-title">Project <em>Overview</em></h3>
+        <p class="modal-p">A unified CYMS for automotive logistics—integrating real-time vehicle tracking, color-coded interactive yard maps, and mobile-first operator workflows into one data-driven dashboard.</p>
       </div>
       <div class="modal-sec">
-        <h3 class="modal-sec-title">Key <em>Features</em></h3>
-        <div class="modal-steps">
-          <div class="modal-step">
-            <div class="step-circle">01</div>
-            <div><div class="step-name">Secure Gateway</div><div class="step-detail">Robust authentication for authorized dealer networks.</div></div>
-          </div>
-          <div class="modal-step">
-            <div class="step-circle">02</div>
-            <div><div class="step-name">Unified Catalog</div><div class="step-detail">Integrated search for physical parts and digital software licenses.</div></div>
-          </div>
-        </div>
+        <h3 class="modal-sec-title">The <em>Approach</em></h3>
+        <p class="modal-p">Focused on "Operator-First" design, I created a system that works as well on a rugged tablet in the yard as it does on a desktop in the office. Real-time data visualization was key to preventing bottlenecks.</p>
       </div>
       <div class="outcome-box">
-        <div class="outcome-title">Results</div>
-        <p class="modal-p" style="margin-bottom:0">Centralized procurement for global dealers into a single, high-utility destination that adheres to strict luxury branding guidelines.</p>
+        <div class="outcome-title">Key Achievement</div>
+        <p class="modal-p" style="margin-bottom:0">Reduced the time to locate and process vehicles by 35% through the implementation of a real-time, color-coded interactive yard grid.</p>
+      </div>
+      <div class="modal-tags">
+        <span class="modal-tag">Data Visualization</span><span class="modal-tag">Field UX</span><span class="modal-tag">Enterprise SaaS</span><span class="modal-tag">Dashboard Design</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="modal-dpworld" onclick="maybeClose(event,'modal-dpworld')">
+  <div class="modal">
+    <div class="modal-close-row"><div class="modal-close-btn" onclick="closeModal('dpworld')">✕</div></div>
+    <div class="modal-hero" style="background:linear-gradient(135deg,#111118,#1a1a25)">
+       <div class="modal-hero-inner">
+          <div class="dp-nav"><div class="dp-brand">DP <span>WORLD</span></div></div>
+          <div class="dp-hero-bar"><div class="dp-headline">Global Terminal<br/>Operator Portal</div></div>
+          <div class="dp-cards">
+            <div class="dp-c"><div class="dp-ci">🚢</div><div class="dp-cl">Vessel</div></div>
+            <div class="dp-c"><div class="dp-ci">📦</div><div class="dp-cl">Cargo</div></div>
+            <div class="dp-c"><div class="dp-ci">📊</div><div class="dp-cl">KPIs</div></div>
+          </div>
+       </div>
+    </div>
+    <div class="modal-body">
+      <div class="modal-eyebrow">B2B Strategy</div>
+      <h2 class="modal-title">Global Logistics Digital Strategy</h2>
+      <div class="modal-overview">
+        <div class="ov-item"><div class="ov-label">Role</div><div class="ov-val">Senior UX/UI</div></div>
+        <div class="ov-item"><div class="ov-label">Timeline</div><div class="ov-val">Ongoing</div></div>
+        <div class="ov-item"><div class="ov-label">Focus</div><div class="ov-val">B2B Product</div></div>
+        <div class="ov-item"><div class="ov-label">Platform</div><div class="ov-val">Cross-Platform</div></div>
+      </div>
+      <div class="modal-sec">
+        <h3 class="modal-sec-title">Project <em>Overview</em></h3>
+        <p class="modal-p">Leading the design strategy for a high-performance terminal portal serving global supply chains. This project involves standardizing complex workflows across different global regions while maintaining localized needs.</p>
+      </div>
+      <div class="modal-sec">
+        <h3 class="modal-sec-title">The <em>Vision</em></h3>
+        <p class="modal-p">The goal is to create a scalable design system that allows rapid feature deployment while ensuring that logistics operators can make critical decisions within seconds using accurate data displays.</p>
+      </div>
+      <div class="outcome-box">
+        <div class="outcome-title">Current Progress</div>
+        <p class="modal-p" style="margin-bottom:0">Developing a comprehensive design system that reduced design-to-development handoff time by 40% in the first quarter of implementation.</p>
+      </div>
+      <div class="modal-tags">
+        <span class="modal-tag">Design Systems</span><span class="modal-tag">Product Strategy</span><span class="modal-tag">Enterprise Web</span><span class="modal-tag">Figma</span>
       </div>
     </div>
   </div>
@@ -412,7 +563,8 @@ footer{background:var(--ink);padding:26px 6vw;display:flex;justify-content:space
 
 <script>
 const obs = new IntersectionObserver(entries => {
-  entries.forEach(e => { if(e.isIntersecting){ setTimeout(()=>e.target.classList.add('visible'),80); obs.unobserve(e.target) } })\n},{threshold:0.08});
+  entries.forEach(e => { if(e.isIntersecting){ setTimeout(()=>e.target.classList.add('visible'),80); obs.unobserve(e.target) } })
+},{threshold:0.08});
 document.querySelectorAll('.fade-up').forEach((el,i)=>{ el.style.transitionDelay=(i%4)*70+'ms'; obs.observe(el) });
 
 function openModal(id){
